@@ -1,0 +1,44 @@
+{
+	"alert": [
+		"<h3>We Buy &amp; Sell <a href=\"/used/\">USED GEAR</a></<p><h2>MHG Wintersport and BCI will be closed today due to snow</p>"
+	],
+    
+    "about": [
+        "With over 40 years of hockey experience, Mike's Hockey Gear thrives on giving the customer the best environment for all of their hockey and skating needs. Now with two locations, we have a full line of hockey gear from popular brands such as <strong>Bauer, Easton, CCM, Sherwood, TPS, Riedell, &amp; Vaughn,</strong> as well as many different brands of hockey sticks. In addition, we sell many accessories needed for your skating needs, such as tape, skate guards, and socks. We sharpen and repair all kinds of skates all day every day, with experienced employees trained to give the best service. We carry the latest in hockey skates and work with you to assure you receive the right skate for your needs. In addition to all one needs for hockey events, Mike's Hockey Gear also carries figure skates and accessories. So for all your hockey needs be sure to check out Mike's Hockey Gear, where we love hockey just as much as you do!"
+    ],
+    
+    "bcs": {
+    	"title": "Bucks County Ice Sports Center",
+        "url": "http://www.bcicesports.com/",
+        "phone": "215-682-2030",
+        "fax": "215-682-0331",
+        "address": "1185 York Road<br />Warminster, PA 18974",
+        "sales": "",
+        "hours": {
+        	"mon": "12:00PM-9:00PM",
+        	"tues": "12:00PM-9:00PM",
+        	"wed": "12:00PM-9:00PM",
+        	"thurs": "12:00PM-9:00PM",
+        	"fri": "12:00PM-9:00PM",
+        	"sat": "10:00AM-9:00PM",
+        	"sun": "10:00AM-9:00PM"
+        }
+    },
+    
+    "ws": {
+        "title": "Wintersport Ice Arena",
+        "url": "http://wintersporticearena.com/",
+        "phone": "215-659-2030",
+        "address": "551 N. York Road<br />Willow Grove, PA 19090",
+        "sales": "",
+        "hours": {
+        	"mon": "5:00PM-9:00PM",
+        	"tues": "5:00PM-9:00PM",
+        	"wed": "5:00PM-9:00PM",
+        	"thurs": "5:00PM-9:00PM",
+        	"fri": "<span class=\"text-danger\">CLOSED</span>",
+        	"sat": "12:00PM-9:00PM",
+        	"sun": "12:00PM-9:00PM"
+        }
+    }
+}

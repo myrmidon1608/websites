@@ -1,0 +1,36 @@
+        
+        </div>
+    </div>
+    
+    <div class="container footer">
+    	<ul>
+        	<li><a href="/">HOME</a></li>
+            <li><a href="/contact/">CONTACT</a></li>
+            <li><a href="/map/">SITE MAP</a></li>
+        </ul>
+    <p>&copy; 2013 MIKE'S HOCKEY GEAR. All rights reserved.</p>
+    </div>
+
+<script src="js/jquery-1.8.2.js"></script>    
+<script src="js/bootstrap.min.js"></script>     
+<script>
+	$(window).load(function() {
+		$.ajax({
+			type: "POST",
+			url: "session.php",
+			dataType: "json",
+			success: function(data) {
+				$('#counter').html(data.counter);
+			}
+		});
+	});
+    
+    $(document).ready(function() {
+        var id = $('.content').attr('id');
+        $('#' + id + '-nav').addClass('active');
+        $('.navbar-inverse .btn-title').text(id.toUpperCase());
+    });
+    
+</script>
+</body>
+</html>
