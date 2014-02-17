@@ -1,0 +1,37 @@
+
+section {width:20%;
+    float:left;
+    position:relative;
+    margin:1.5%;}
+
+    section img {width:100%;
+        opacity:0.5;}
+
+#currentItem {width:50% !important;
+    height:25em;}
+
+    #currentItem img {opacity:1 !important;}
+
+.menuContainer {text-align:center;
+    position:relative;
+    overflow:auto;}
+
+.arrows {width:131px;
+    height:58px;
+    cursor:pointer;
+    position:absolute;
+    top:35%;
+    z-index:10;
+    opacity:0.7;}
+
+    .arrows:hover, .arrows:active {opacity:1;}
+
+    #leftArrow {background:url('img/eye-arrow.png') no-repeat;
+        background-size:262px 58px;
+        background-position:left;
+        left:0;}
+
+    #rightArrow {background:url('img/eye-arrow.png') no-repeat;
+        background-size:262px 58px;
+        background-position:right;
+        right:0;}

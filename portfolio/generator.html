@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GABRIE-ANNE NAME GENERATOR</title>
+<link rel="stylesheet" href="core/css/bootstrap.css" />
+<link rel="stylesheet" href="core/css/bootstrap-responsive.css" />
+<style>
+
+	body {background:#000;
+		color:#fff;
+		text-align:center;
+        margin-top:2em;}
+		
+	input, button, #nameOutput {margin-top:1.5em;}
+	
+</style>
+</head>
+    <body>
+        <div class="container">
+            <div class="row-fluid">
+                    <h2 class="text-success">GABRIE-ANNE PARTY NAME GENERATOR</h2>
+                    <p class="text-info">
+                        <strong>The party don't start til Gabrie-Anne says it does!</strong>
+                    </p>
+                    
+                    <div class="control-group">
+                        <label class="text-warning">Enter first name below for your party name!</label>
+                        <input id="nameInput" type="text" />
+                    </div>
+            </div>
+
+            <button class="btn btn-inverse" id="submit">START THE PARTY!</button>
+
+            <div class="row-fluid">
+                <h3 id="nameOutput"></h3>
+            </div>
+        </div>
+
+        <script>
+
+            var submitName = document.getElementById('submit');
+            submitName.onclick = generateName;
+
+            function generateName() {
+                var nameInput = document.getElementById('nameInput'),
+                    nameOutput = document.getElementById('nameOutput'),
+                    nameValue = nameInput.value,
+                    inputClass = (validateName(nameValue)) ? 'control-group' : 'control-group error';
+                    outputClass = (validateName(nameValue)) ? 'text-success' : 'text-error';
+
+                nameInput.parentNode.className = inputClass;
+                nameOutput.className = outputClass;
+                
+                if(validateName(nameValue)) {
+                    var customInput = createName(nameValue);
+
+                    nameOutput.innerText = customInput;
+                } else {
+                    nameOutput.innerText = 'Party Pooper!';
+                }
+            }
+            
+            function validateName(value) {
+                var validName;
+
+                switch(value) {
+                    case "":
+                    case (value.length <= 2):
+                        validName = false;
+                        break;
+                    default:
+                        validName = true;
+                        break;
+                }
+                return validName;
+            }
+            
+            function createName(name) {
+                var splitName = name.split(' ', '-'),
+                    ifSplitName = (splitName.length) ? splitName[0] : name,
+                    toUpperCase = ifSplitName.charAt(0).toUpperCase() + ifSplitName.slice(1),
+                    addAnne = toUpperCase + '-Anne';
+            
+                if( name.toLowerCase() === 'carrie-anne' ||
+                    name.toLowerCase() === 'gabrie-anne' ||
+                    name.toLowerCase() === 'gabrie')
+                    addAnne = 'WOOO! GABRIE-ANNE IN DA HOUSE!';
+            
+                return addAnne;
+            }
+
+        </script>
+    </body>
+</html>
