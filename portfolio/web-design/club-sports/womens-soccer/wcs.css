@@ -1,0 +1,106 @@
+/* Women's Club Soccer */
+
+body {height:100%;
+    width:100%;
+	background:#BAB5AA;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	padding:0px;
+	margin:0px;}
+
+h2 {color:#000052;
+	text-align:center;}
+
+h3, h5 {color:#664400;}
+
+h4 {color:#000052;}
+
+p {text-align:justify;}
+
+a {color:#664400;
+	text-decoration:none;}
+	
+a:hover {color:#FFA900;}
+
+img {border:0px;}
+
+.container {width:100%;
+	min-height:100%;
+	display:table;}
+		
+.banner {width:100%;
+	height:110px;
+	background:url(images/banner-long.png);
+    z-index:1;
+	position:fixed;}
+
+.side {width:150px;
+	height:100%;
+	background:url(images/bar-fill.png);
+	display:table-cell;}
+		
+.bar {position:fixed;
+	margin-top:150px;}
+		
+.bar ul {font-weight:bold;
+	list-style:none;
+	padding:0px;
+	margin:0px;}
+		
+.bar li a {width:140px;
+	height:25px;
+	background:url(images/bar1.png);
+	color:#666666;
+	display:block;
+	padding:5px 0px 0px 10px;}
+
+.bar li a:hover {background:url(images/bar2.png);
+	color:#000000;}
+
+.content {width:auto;
+	min-height:550px;
+	margin:120px 30px 50px 180px;}
+		
+.ie div.content {padding:110px 20px 0px 170px;
+	margin:0px 0px 50px 0px;}
+
+.header {width:100%;
+	text-align:right;
+	padding:20px 0px;}
+		
+.footer {width:100%;
+	height:70px;
+	background:url(images/banner-short.png);}
+		
+.footer div {padding:5px 20px 0px 170px;}
+
+/* Slideshow */
+
+.preview div {float:left;
+	padding:20px;}
+
+.preview img {width:400px;
+	height:300px;
+	display:block;
+	padding:5px;
+	border:1px solid #A67A00;
+	margin-bottom:10px;}
+
+.gallery {width:572px;
+	margin:0 auto;}
+		
+.slides {width:572px;
+    height:450px;
+	position:absolute;
+    overflow:hidden;}
+		
+.ie div.slides {margin-left:-6px;}
+        
+.slides img {width:560px;
+    height:420px;
+    padding:5px;
+    border:1px solid #A67A00;}
+        
+.nav {width:560px;
+	padding:460px 0px 20px 0px;
+    margin:0px auto;}

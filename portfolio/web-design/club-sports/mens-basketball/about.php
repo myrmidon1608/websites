@@ -1,0 +1,10 @@
+<?php $title= "| About";
+$desc= "The Men's Club Basketball program at The College of New Jersey is a student-run organization that travels to other colleges and universities to play in tournaments. This is the about page, where you can learn the history and current procedures of the men's club basketball team.";
+include ('top.php'); ?>
+
+        	<div class="header"><h1>About</h1></div>
+        <p>Bacon ipsum dolor sit amet nisi ribeye sausage corned beef, salami esse short ribs flank dolore cow. Tri-tip hamburger jerky, pig biltong frankfurter ball tip magna non anim. Officia pig salami tail rump sausage dolore commodo elit drumstick. Excepteur pancetta chuck in esse salami aliquip cupidatat sirloin in andouille. Eiusmod dolore quis, velit leberkas officia esse aliquip tempor adipisicing hamburger in ham.</p>
+		<p>Occaecat pig aliquip ex quis sirloin tail pancetta prosciutto elit in corned beef magna pork loin dolore. Bacon ham hock tongue boudin hamburger nisi sed meatloaf capicola laboris ut. Ut reprehenderit elit in hamburger id. Shank non eu, sirloin sausage culpa anim short ribs tail. Tri-tip beef flank anim. In laborum bresaola, short ribs ullamco tri-tip jerky shankle bacon capicola. Frankfurter voluptate beef ribs elit dolor exercitation sirloin chuck.</p>
+		<p>Bresaola in tri-tip laboris filet mignon pork loin chuck capicola kielbasa minim qui corned beef quis nisi. Meatball leberkas non dolore duis et fugiat shoulder bacon anim incididunt ribeye ut minim cillum. Hamburger velit ad tri-tip. Frankfurter pork chop fugiat consequat short ribs anim brisket tempor velit jowl cillum in quis bacon boudin. Flank rump pastrami, fugiat sed pancetta eiusmod dolore veniam turducken spare ribs culpa qui. Qui in ad officia sint. Irure biltong in reprehenderit.</p>
+
+<?php include ('bottom.php') ?>

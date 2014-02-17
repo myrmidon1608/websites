@@ -1,0 +1,109 @@
+body {background:#000000;
+	font-family:Verdana, Geneva, sans-serif;
+	padding:0px;
+	margin:30px 0px 0px 0px;}
+	
+h2 {padding:0px;}
+
+h3 {color:#990000;}
+
+p {font-size:12px;}
+
+a:link, a:visited {color:#188561;
+	text-decoration:none;}
+	
+a:hover {color:#000000;}
+
+.container {width:1030px;
+	height:100%;
+	margin:0 auto;}
+	
+.title {height:60px;
+	background:url(images/title1.jpg);
+	padding:30px 30px 50px 30px;
+	margin-bottom:10px;}
+	
+.review {width:200px;
+	color:#990000;
+	float:right;
+	margin-top:-82px;}
+	
+.members {position:relative;
+	float:right;
+	z-index:10;}
+	
+.members ul {list-style:none;
+	padding:0px;
+	margin:0px 8px 0px 0px;}
+	
+.members li {width:150px;
+	background:url(images/arm-tab.png);
+	font-size:12px;
+	text-align:center;
+	display:inline-block;
+	margin:-60px 2px 0px 2px;}
+	
+.members a:link, .members a:visited {width:140px;
+	color:#FFFFFF;
+	text-decoration:none;
+	display:block;
+	padding:30px 5px 5px 5px;}
+	
+.members a:hover {background:url(images/arm-tab.png);
+	position:absolute;
+	margin-top:-90px;}
+	
+span.name {font-weight:bold;
+	display:block;}
+	
+ul.nav {float:left;
+	list-style:none;
+	padding:0px;
+	margin:30px 0px 0px 40px;}
+	
+.nav li {width:130px;
+	background:url(images/punch-tab1.png);
+	color:#000000;
+	text-align:right;
+	font-size:14px;
+	font-weight:bold;
+	display:block;
+	cursor:pointer;
+	padding:17px 5px 16px 25px;
+	margin-bottom:10px;}
+	
+.nav li:hover {background:url(images/punch-tab2.png);}
+
+.content {position:relative;
+	float:left;
+	z-index:20;}
+	
+.content div {width:830px;
+	background:#FFFFFF;
+	margin-top:-20px;}
+	
+.content div div {min-height:500px;
+	background:url(images/laxbro.png) bottom right no-repeat;
+	padding:15px 30px 45px 30px;}
+	
+.content p {padding-right:60px;}
+
+.header {font-weight:bold;
+	text-align:center;}
+	
+.header a:link, .header a:visited {color:#990000;
+	text-decoration:none;}
+	
+.header a:hover {color:#000000;}
+
+.show {background:none;
+	overflow:auto;
+	margin-left:-15px;}
+
+.show img {width:250px;
+	height:200px;}
+	
+.show p {text-align:center;
+	float:left;
+	font-weight:bold;
+	padding:0px;}

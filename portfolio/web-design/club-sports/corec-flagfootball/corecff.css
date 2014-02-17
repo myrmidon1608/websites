@@ -1,0 +1,139 @@
+/* Co-Rec Flag Football */
+
+html {overflow:auto;}
+
+body {width:100%;
+	height:100%;
+	background:url(images/bg.jpg) #A67A00 center repeat-y fixed;
+	padding:0px;
+	margin:0px;}
+	
+p {text-align:justify;}
+	
+p.forms img {width:25px;
+	height:25px;
+	background:url(images/forms.png) -25px 0px no-repeat;
+	position:absolute;
+	margin:-2px 0px 0px 15px;}
+
+h3 {color:#293F6F;}
+
+a:link, a:visited {color:#293F6F;
+	text-decoration:none;}
+
+a:hover {color:#A67A00;
+	text-decoration:underline;}
+
+img {border:none;}
+
+img.logo {position:absolute;
+	margin:0px 0px 20px 40px;}
+
+img.flag {position:absolute;}
+
+img.clubff {margin:45px 0px 0px 215px;}
+	
+.container {width:950px;
+	height:100%;
+	background:#FFFFFF;
+	margin:0 auto;}
+	
+.title {width:950px;
+	height:140px;
+	background:url(images/title-bg.jpg) repeat-x;
+	padding:10px 0px;}
+	
+.ie div.title {height:115px;}
+
+.title ul {position:absolute;
+	padding-top:5px;}
+	
+.ie div.title ul {padding:30px 0px 0px 5px;}
+	
+.title li {list-style:none;
+	margin:6px 0px;}
+
+.title a:link, .title a:visited {font-size:14px;
+	font-weight:bold;}
+	
+.title a:hover {color:#A67A00;
+	text-decoration:none;}
+
+.bar {background:url(images/bar-bg.jpg) top repeat-x;}
+	
+.bar ul {width:320px;
+	padding:0px;
+	margin:-25px 0px 0px 360px;}
+	
+.ie div.bar ul {margin-top:0px;}
+	
+.bar li {width:78px;
+	list-style:none;
+	text-align:center;
+	display:inline-block;
+	padding:0px;
+	margin:0px -1px;}
+	
+.ie div.bar li {float:left;
+	margin:0px 1px;}
+	
+.bar a:link, .bar a:visited {width:72px;
+	background:url(images/bar-bg.jpg) #FFFFFF top repeat-x;
+	font-size:12px;
+	font-weight:bold;
+	display:block;
+	padding:6px 3px;}
+	
+.bar a:hover {color:#293F6F;
+	text-decoration:none;
+	position:absolute;
+	margin-top:-25px;}
+		
+.ie div.bar a:hover {position:static;
+	margin-top:-6px;}
+
+.content {width:910px;
+	min-height:500px;
+	padding:20px;}
+		
+.header {width:905px;
+	height:100%;
+	background:url(images/belt.png) top left no-repeat;
+	padding-left:45px;}
+		
+.header font {height:68px;
+	width:35px;
+	background:url(images/hang-flag.png) top left no-repeat;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:30px;
+	font-weight:bold;
+	text-shadow:#333333 1px 1px 2px;
+	display:inline-block;
+	color:#A67A00;
+	padding:32px 0px 0px 8px;
+	margin-top:4px;}
+	
+font.mfix {padding-left:6px;}
+
+.footer {width:930px;
+	height:60px;
+	padding:10px;
+	border-top:2px dashed #A67A00;}
+	
+/* Slideshow */
+	
+.gallery {position:absolute;
+	top:300px;}
+		
+.slides {width:100%;
+	height:500px;
+	overflow:hidden;}
+		
+.slides img {width:600px;
+	height:450px;
+	padding:3px;
+	margin-left:121px;
+	border:1px solid #293F6F;}
+		
+.nav {width:600px;
+	padding:510px 0px 50px 125px;}

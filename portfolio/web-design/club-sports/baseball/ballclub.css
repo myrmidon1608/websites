@@ -1,0 +1,104 @@
+/* Club Baseball */
+
+html {overflow:auto;}
+
+body {width:100%;
+	height:100%;
+	background:url(images/background.png) fixed;
+	margin:0px;
+	padding:0px;}
+
+h3 {color:#293F6F;}
+
+p.indent {margin-left:95px;}
+
+font {color:#990033;}
+
+a {color:#000052;
+	text-decoration:none;}
+	
+a:hover {text-decoration:underline;}
+
+img {border:0px;}
+		
+.header {width:970px;
+	height:60px;
+	text-align:right;
+	margin-top:20px;}
+		
+.container {width:1030px;
+	height:100%;
+	margin:0 auto;}
+		
+.title {height:120px;
+	background:url(images/title-bg.png) #000052 right no-repeat;
+	padding:0px 10px;}
+
+.bar {position:absolute;}
+
+.bar ul {list-style:none;
+	padding:0px;
+	margin:0px 0px 0px 47px;}
+	
+.bar li {width:146px;
+	background:#000052;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+	display:inline-block;
+	float:left;
+	margin:0px 3px;
+	border-right:2px outset #FFD11C;
+	border-bottom:2px outset #FFD11C;
+	border-left:2px outset #FFD11C;
+	-moz-border-radius:0px 0px 20px 20px;
+    border-radius:0px 0px 20px 20px;}
+	
+.bar li a {width:146px;
+	display:block;
+	color:#FFFFFF;
+	text-decoration:none;
+	padding:4px 0px;}
+	
+.bar li a:hover {background:url(images/ball.png) no-repeat;
+	background-position:6px 3px;
+	color:#FFD11C;
+	text-decoration:none;
+	padding-bottom:10px;}
+		
+.content {min-height:500px;
+	background:#FFFFFF;
+	padding:30px;
+	border-top:2px solid #FFD11C;}
+	
+.footer {height:60px;
+	background:#000052;
+	padding:10px;
+	border-bottom:2px solid #FFD11C;}
+		
+table {width:900px;
+	margin:20px auto;
+	border-collapse:collapse;}
+
+td, th {height:30px;}
+
+td.sub, tr.sub th {color:#000052;
+	text-align:left;}
+	
+/* Slideshow */
+	
+.gallery {position:absolute;
+	top:225px;}
+		
+.slides {width:100%;
+	height:500px;
+	overflow:hidden;}
+		
+.slides img {width:600px;
+	height:450px;
+	padding:3px;
+	margin-left:181px;
+	border:1px solid #FFD11C;}
+		
+.nav {width:600px;
+	padding:480px 40px 30px 185px;}

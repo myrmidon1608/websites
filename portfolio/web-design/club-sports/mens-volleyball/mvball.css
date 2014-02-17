@@ -1,0 +1,93 @@
+/* Men's Club Volleyball */
+
+html {overflow:auto;}
+
+body {width:100%;
+	height:100%;
+	background:url(images/bg.png) fixed;
+	padding:0px;
+	margin:0px;}
+		
+p {font-size:16px;
+	text-align:justify;}
+		
+h4 {color:#293F6F;}
+
+p.center {text-align:center;
+	padding:10px;}
+
+a {color:#293F6F;
+	text-decoration:none;}
+
+a:hover {text-decoration:underline;}
+
+img {border:0px;}
+
+.container {width:970px;
+	height:100%;
+	background:#A67A00;
+	padding:0px 27px;
+	margin:0 auto;
+	border-left:3px solid #0C091A;
+	border-right:3px solid #0C091A;
+	border-bottom:3px solid #0C091A;}
+		
+.title {width:100%;
+	padding:20px 0px;}
+		
+.content {width:730px;
+	min-height:550px;
+	background:#FFFFFF;
+	float:left;
+	padding:20px;
+	margin-bottom:20px;
+	-moz-border-radius:25px;
+	border-radius:25px;}
+		
+.header {padding:10px;}
+		
+.bar {width:170px;
+	float:right;}
+		
+.bar ul {list-style:none;
+	padding:0px;
+	margin:0px;}
+		
+.bar li {height:36px;
+	display:block;}
+		
+.footer {width:970px;
+	height:60px;
+	clear:both;
+	padding:5px 0px 10px 0px;
+	margin:0 auto;}
+		
+table {width:700px;
+	color:#293F6F;
+	text-align:center;
+	margin:0 auto;
+	border-collapse:collapse;}
+		
+td, th {height:25px;
+	border:2px groove #0C091A;}
+		
+table.ros {width:500px;
+	margin:20px auto 30px auto;}
+		
+/* Slideshow */
+
+.gallery {position:absolute;
+	top:250px;}
+
+.slides {width:100%;
+    height:450px;
+    overflow:hidden;}
+        
+.slides img {width:600px;
+    height:400px;
+    padding:5px;
+    margin-left:59px;
+    border:1px solid #0C091A;}
+		
+.nav {width:600px;
+    padding:475px 0px 50px 65px;}

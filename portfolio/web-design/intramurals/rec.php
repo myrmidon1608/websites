@@ -1,0 +1,11 @@
+<?php $title= "| Recreation Center";
+$desc="The Student Recreation Center at The College of New Jersey houses facilities for basketball, tennis, racquetball, volleyball an indoor track, and two fitness rooms dedicated individually to cardiovascular and free weight exercise. Use of the Recreation Center is included with a PEC membership.";
+include ('top.php'); ?>
+
+		<iframe class="cal" src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=iiso59vdsllc4j1j7kdko2cs2g%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FNew_York" align="right"></iframe>
+		<p><img src="images/logos/reccenter.png" alt="Recreation Center"></p><br />					
+		<p>Bacon ipsum dolor sit amet andouille rump aute duis nisi ground round ut exercitation strip steak sirloin. Id ham hock deserunt, jowl jerky pariatur ea in shoulder consectetur. Sed ex salami in qui hamburger meatball short loin boudin pariatur ribeye capicola dolore do. Beef ribs shank sed, ut commodo prosciutto do adipisicing pastrami meatball ut ullamco aute kielbasa short loin. Spare ribs turducken cillum drumstick, tongue ham sunt dolor shankle meatball meatloaf.</p>
+		<p>Ut jowl shoulder swine incididunt frankfurter ground round strip steak esse nisi irure prosciutto pork. Sunt consequat commodo sausage filet mignon. Minim cillum tail short loin shank, ut drumstick do commodo spare ribs dolore elit officia enim nisi. Andouille ex shank, brisket ad pork belly occaecat aute eiusmod esse jerky sunt.</p>
+		<p>Irure proident nulla consectetur prosciutto pork chop commodo pig consequat esse et velit ham pancetta. Proident shoulder eu laboris, leberkas est pork belly minim do cillum prosciutto quis. Ball tip sunt salami, ribeye consequat qui incididunt dolore bacon sirloin nulla eiusmod pig pariatur. Flank aliqua ad veniam andouille cupidatat irure culpa jowl laboris tongue cillum esse exercitation proident.</p>
+        
+<?php include ('bottom.php'); ?>

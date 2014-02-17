@@ -1,0 +1,97 @@
+/* Dynamic Web */
+
+body {background:#666666;
+	font-family:Verdana, Geneva, sans-serif;
+	padding:0px;
+	margin:0px;}
+	
+label {font-weight:bold;
+	color:#333333;}
+		
+font {font-family:Verdana, Geneva, sans-serif;
+	padding-left:10px;}
+	
+p {text-align:justify;}
+	
+table {margin:10px 0px;
+	border-collapse:collapse;}
+	
+td, th {height:20px;
+	padding:5px;
+	border:1px solid #999999;}
+	
+table.madlibs td {padding:7px 5px;
+	border:none;}
+	
+table.song {margin-bottom:30px;}
+
+.song td {padding:10px;
+	border:none;}
+	
+th {color:#FFFFFF;
+	background:#333333;}
+	
+a {color:#666666;
+	text-decoration:none;}
+	
+a:hover {text-decoration:underline;}
+	
+.trivia {background:url(mphg.png) no-repeat top right;
+	padding-left:100px;}
+	
+.container {width:800px;
+	height:100%;
+	background:#FFFFFF;
+	margin:0 auto;}
+	
+.content {width:740px;
+	min-height:500px;
+	padding:30px;}
+	
+.nav {padding:10px;}
+	
+.nav ul {list-style:none;
+	padding:0px;
+	margin:0px;}
+
+.nav li {width:106px;
+	height:30px;
+	background:#666666;
+	text-align:center;
+	display:inline-block;
+	margin-bottom:10px;}
+	
+.nav a {width:96px;
+	height:20px;
+	color:#000000;
+	text-decoration:none;
+	display:block;
+	padding:5px;}
+	
+.nav a:hover {background:#000000;
+	color:#FFFFFF;}
+		
+.output {font-weight:bold;
+	color:#333333;
+	margin-bottom:50px;}
+	
+.can-pass {width:180px;
+	background:#FFFFFF;
+	text-align:center;
+	position:absolute;
+	left:600px;
+	top:200px;
+	padding:10px;
+	border:2px solid #0000FF;}
+	
+.rsscont {width:1000px;
+	margin:0 auto;}
+	
+.rsscont p {text-align:center;}
+	
+.rss {font-size:12px;}
+	
+.rss a:link, .rss a:visited {color:#666666;
+	text-decoration:none;}
+	
+.rss a:hover {text-decoration:underline;}

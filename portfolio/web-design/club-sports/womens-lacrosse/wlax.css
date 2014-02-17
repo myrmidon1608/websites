@@ -1,0 +1,99 @@
+/* Women's Club Lacrosse */
+
+html {overflow:auto;}
+
+body {width:100%;
+	height:100%;
+	background:url(images/background.jpg) #293F6F center repeat-y fixed;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;}
+		
+p, h3 {color:#FFFFFF;}
+
+p {font-size:14px;
+	text-align:justify;}
+		
+h2, h4, font {color:#A67A00;}
+		
+a {color:#FFFFFF;}
+		
+a:hover {color:#A67A00;
+	text-decoration:none;}
+
+img {border:0px;}
+		
+img.pic {width:650px;
+	height:435px;
+	border:1px solid #A67A00;
+	padding:4px;}
+		
+.container {width:950px;
+	background:#293F6F;
+	margin:0 auto;}
+
+.bar {float:left;
+	position:fixed;
+	top:50px;}
+		
+.ie div.bar {width:200px;position:relative;}
+		
+.bar ul, li {padding:0px;
+	margin:0px;}
+		
+.bar li {list-style:none;
+	padding:2px 20px;}	
+			
+.bar a {width:173px;
+	font-size:20px;
+	text-align:left;
+	height:27px;
+	background:url(images/bluecurve.png);
+	text-decoration:none;
+	display:block;
+	padding:3px 0px 0px 7px;}
+		
+.bar a:hover {background:url(images/goldcurve.png);
+	color:#FFFFFF;}
+
+.content {width:700px;
+	min-height:700px;
+	float:right;
+	padding:20px;}
+		
+.logo {width:100%;
+	text-align:center;}
+		
+.logo img {width:290px;
+	height:175px;}
+
+.footer {width:910px;
+	height:60px;
+	clear:both;
+    padding:5px 20px;}
+
+table {color:#FFFFFF;
+	border-collapse:collapse;}
+		
+td, th {height:15px;
+	padding:5px;
+	border:3px groove #213051;}
+		
+table.pra {font-size:12px;}
+
+.day td {background:#A67A00;
+		text-align:right;
+		font-weight:bold;}
+
+.box td {width:90px;
+	height:70px;}
+
+.ros td {width:330px;
+	vertical-align:top;
+	border:none;
+	padding:0px 10px;}
+		
+.ros p {text-align:left;}
+		
+.ros img {border:1px solid #A67A00;
+	padding:4px;}

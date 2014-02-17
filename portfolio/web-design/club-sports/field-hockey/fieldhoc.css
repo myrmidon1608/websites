@@ -1,0 +1,123 @@
+/* Club Field Hockey */
+
+html {overflow:auto;}
+
+body {width:100%;
+	height:100%;
+	background:url(Images/background.jpg) #293F6F center repeat-y fixed;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#293F6F;
+	margin:0px;
+	padding:0px;}
+		
+p {text-align:justify;}
+
+h3 {color:#A67A00;}	
+	
+a {color:#A67A00;
+	text-decoration:none;}
+
+a:hover {color:#293F6F;
+	text-decoration:underline;}
+		
+img {border:0px;}
+
+img.home  {width:500px;
+	height:375px;
+	padding:4px;
+	border:1px solid #A67A00;}
+	
+img.fb {position:absolute;
+	right:3px;
+	margin-top:-5px;}
+	
+.ie img.fb {left:122px;}
+		
+.container {width:790px;
+	height:100%;
+	margin:0 auto;}
+		
+.banner {background:#FAFAD2;
+	padding-left:6px;
+	border-bottom:2px solid #A67A00;}
+		
+.bar {position:absolute;
+	z-index:1;}
+		
+.ie div.bar {position:relative;}
+		
+.bar ul, li {width:149px;
+	padding:0px;
+	margin:0px;}
+		
+.bar li {background:#293F6F;
+	font-size:12px;
+	font-weight:bold;
+	list-style-type:none;
+	display:block;
+	border-bottom:1px solid #A67A00;
+	border-right:1px solid #A67A00;}
+		
+.ie div.bar li {margin-bottom:-2px;}
+
+.bar li a {color:#A67A00;
+	text-decoration:none;
+	display:block;
+	padding:7px 5px;}
+		
+.bar li a:hover {background:#A67A00;
+	color:#293F6F;}
+		
+.content {width:600px;
+	min-height:575px;
+	float:right;
+	background:#FFFFFF;
+	padding:20px 20px 20px 170px;}
+		
+.ie div.content {margin-top:-345px;}
+		
+.header {width:590px;
+	text-align:right;
+	float:left;
+	margin-bottom:10px;}
+		
+.footer {width:780px;
+	height:60px;
+	background:#FFFFFF;
+	clear:both;
+	padding:5px 5px 10px 5px;
+	margin:0 auto;}
+		
+table {margin:0 auto;
+	border-collapse:collapse;}
+
+td, th {height:20px;
+	padding:5px;
+	border:1px solid #293F6F;}
+		
+th {background:#FAFAD2;}
+
+td.captain {font-weight:bold}
+
+/* Slideshow */
+			
+.gallery {position:absolute;
+	top:190px;}
+
+.slides {width:100%;
+	height:500px;
+	overflow:hidden;}
+		
+.slides img {width:500px;
+	height:375px;
+	padding:4px;
+	margin-left:45px;
+	border:1px solid #A67A00;}
+		
+.ie div.slides img {margin-left:-545px;}
+		
+.nav {width:500px;
+	padding:475px 40px 0px 50px;}
+		
+.ie div.nav {padding-top:415px;}

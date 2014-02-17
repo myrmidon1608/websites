@@ -1,0 +1,100 @@
+/* TCNJ Women's Ultimate Frisbee */
+
+body {background:#75BFEA;
+	padding:0px;
+	margin:0px;}
+		
+p {text-align:justify;}
+
+p.sch {font-size:18px;
+	font-weight:bold;
+	padding-left:150px;}
+
+a {color:#181AB5;
+	text-decoration:none;}
+
+a:hover {text-decoration:underline;}
+
+img {border:0px;}
+		
+div {margin:0 auto;}
+
+.title {min-width:1000px;
+	height:220px;
+	text-align:center;
+	padding:5px 0px;
+	margin:0 auto;}
+		
+.title img {position:relative;
+	z-index:-1;}
+		
+.container {width:1000px;
+	height:100%;
+	background:#FFFFFF;
+	margin-bottom:20px;
+	border:2px solid #000000;
+	outline:5px solid #000000;
+	outline-offset:2px;}
+		
+.ie div.container {border:6px double #000000;}
+		
+.bar {width:100%;
+	height:100px;
+	background:url(images/root-bar.png) center;
+	text-align:center;
+	position:relative;
+	z-index:1;}
+		
+.bar ul, li {float:left;
+	padding:0px;
+	margin:0px;}
+
+.bar li {list-style:none;
+	display:inline-block;
+	border-left:1px solid #000000;}
+		
+.bar li a {width:100px;
+	color:#000000;
+	font-size:20px;
+	font-weight:bold;
+	display:inline-block;
+	padding:3px 5px;}
+		
+.ie div.bar li a {padding-bottom:4px;}
+
+.bar li a:hover {background:url(images/frisbee.png) #75BFEA right no-repeat;
+	text-decoration:none;}
+		
+.content {width:960px;
+	min-height:300px;
+	padding:0px 20px 20px 20px;}
+		
+.content table {width:600px;
+	margin:0px auto 20px auto;
+	border-collapse:collapse;}
+
+.content td {height:25px;
+	padding-left:10px;
+	border:2px groove #CCCCCC;}
+
+.header {height:50px;
+	background-image:url(images/symbol.png);
+	background-repeat:no-repeat;}
+
+.header h2 {padding:13px 0px 0px 30px;}
+
+.photo {text-align:center;
+	margin-top:20px;}
+
+.photo img {padding:3px;
+	border:1px solid #181AB5;}
+		
+.gallery {text-align:center;}
+
+.gallery img {padding:3px;
+	border:1px solid #181AB5;}
+		
+.footer {width:97%;
+	height:65px;
+	padding-top:5px;
+	border-top:thin solid #000000;}

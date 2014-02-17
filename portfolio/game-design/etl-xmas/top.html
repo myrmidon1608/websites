@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="game/nav.css" />
+        <script src="jquery-1.8.2.js"></script>
+        <script src="game/bound.js"></script>
+        <script src="game/close.js"></script>
+        <script src="game/meet-team.js"></script>
+    </head>
+    <body onload="move(0,0);">
+        <div style="margin:0 auto;">
+            <div class="map">
+                <div id="teamScrn">
+                    <h3 style="margin:0px;">Blah Blah Blah</h3>
+                    <div class="exitBtn" onclick="closeScrn('team');">X</div>
+                    <div id="team-info"></div>
+                </div>
+                <div id="memberScrn">
+                    <div class="exitBtn" onclick="closeScrn('member');">X</div>
+                    <div id="member-info"></div>
+                </div>

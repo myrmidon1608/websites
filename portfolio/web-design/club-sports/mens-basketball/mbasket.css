@@ -1,0 +1,100 @@
+/* Men's Club Basketball */
+
+body {background:url(images/bg.jpg) #293F6F center repeat-y;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;}
+	
+p {font-size:13px;
+	text-align:justify;}
+
+h1 {color:#293F6F;}
+
+h3 {color:#A67A00;}
+
+a:link, a:visited {color:#293F6F;
+	font-weight:300;
+	text-decoration:none;}
+
+a:hover {text-decoration:underline;}
+	
+img {border:0px;}
+
+.container {width:870px;
+	background:#FFFFFF;
+	margin:0 auto;}
+	
+.title {width:850px;
+	height:155px;
+	background:url(images/title-bg.jpg) #000000 no-repeat;
+	padding:10px;}
+	
+.bar {width:695px;
+	height:5px;
+	background:#000000;
+	padding:0px 80px 10px 95px;}
+	
+.bar ul {height:30px;
+	padding:0px;
+	margin:0 auto;}
+	
+.bar li {width:110px;
+	list-style:none;
+	display:inline-block;
+	padding-bottom:10px;}
+	
+.ie div.bar li {float:left;
+	margin-right:4px;}
+	
+.bar a:link, .bar a:visited {height:10px;
+	width:90px;
+	background:url(images/arrow-gold.png) top center no-repeat;
+	color:#FFFFFF;
+	text-align:center;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+	display:block;
+	position:absolute;
+	top:140px;
+	padding:17px 10px 13px 10px;}
+	
+.bar a:hover {background:url(images/arrow-blue.png) top center no-repeat;}
+	
+.content {width:830px;
+	min-height:500px;
+	padding:20px;}
+	
+.header {width:400px;
+	height:30px;
+	background:url(images/header.png) right no-repeat;
+	text-align:right;
+	padding:10px;
+	margin-left:400px;}
+	
+.header h1 {padding:0px 30px 20px 0px;
+	margin-top:0px;}
+	
+.footer {width:850px;
+	height:60px;
+	padding:10px;
+	border-top:2px solid #000000;}
+			
+/* Slideshow */
+
+.gallery {position:absolute;
+	top:350px;}
+		
+.slides {width:100%;
+	height:500px;
+	overflow:hidden;}
+		
+.slides img {width:600px;
+	height:450px;
+	padding:3px;
+	margin-left:155px;
+	border:1px solid #A67A00;}
+		
+.nav {width:600px;
+	padding:500px 0px 40px 159px;}
+		

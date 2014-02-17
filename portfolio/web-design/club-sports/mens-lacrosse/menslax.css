@@ -1,0 +1,110 @@
+/* Men's Club Lacrosse */
+
+html {overflow:auto;}
+
+body {width:100%;
+	height:100%;
+	background:url(images/background.jpg) #001D48 center repeat-y;
+	margin:0px;
+	padding:0px;}
+		
+p {color:#FFFFFF;
+	text-align:justify;}
+
+h3 {color:#FFD11C;
+	font-weight:bold;}
+		
+font {color:#A67A00;}
+
+a {color:#FFD11C;
+	text-decoration:none;}
+	
+a:hover {text-decoration:underline;}
+
+img {border:0px;}
+
+img.home {padding:5px;
+	margin:0px 0px 10px 20px;
+	border:2px solid #FFD11C;}
+
+.container {width:950px;
+	background:url(images/shine-bg.png) #001D48 top left no-repeat;
+	margin:0 auto;}
+		
+.bar, .header {font-family:"Liberation Serif", Times, serif;}
+		
+.bar {font-size:15px;
+	font-weight:bold;
+	text-align:center;
+	padding-right:4px;}
+		
+.ie div.bar {padding-left:5px;}
+		
+.bar ul {padding:0px;
+	margin:-5px 0px 0px 0px;}
+		
+.bar li {width:116px;
+	list-style:none;
+	display:inline-block;
+	padding:0px;
+	margin:0px 7px;}
+		
+.ie div.bar li {float:left;
+	margin:0px 9px;}
+		
+.bar a {width:106px;
+	background:#001D48;
+	color:#FFFFFF;
+	display:block;
+	padding:5px;
+	border-right:2px outset #FFD11C;
+	border-bottom:2px outset #FFD11C;
+	border-left:2px outset #FFD11C;
+	-moz-border-radius:0px 0px 20px 20px;
+    border-radius:0px 0px 20px 20px;}
+
+.bar a:hover {color:#FFD11C;
+	text-decoration:none;
+	position:absolute;
+	padding-bottom:10px;
+	margin-top:-19px;}
+		
+.ie div.bar a:hover {margin:0px 0px 0px -58px;}
+		
+.content {width:910px;
+	min-height:500px;
+	float:right;
+	padding:50px 20px 20px 20px;}
+		
+.ie div.content {height:100%;}
+
+.header {width:300px;
+	height:50px;
+	background:url(images/header.png) no-repeat;
+	float:right;
+	margin:0px 0px 20px 600px;}
+
+.header p {font-size:44px;
+	font-weight:800;
+	color:#A67A00;
+	padding-left:10px;
+	margin:0px;}
+		
+.footer {width:910px;
+	height:60px;
+	clear:both;
+	padding:5px 20px;}
+
+table {color:#FFFFFF;
+	text-align:center;
+	margin:0 auto;
+	border-collapse:collapse;}
+		
+td, th {height:20px;
+	padding:5px;
+	border:2px groove #A67A00;}
+
+th {color:#A67A00;}
+
+ul.list {color:#FFFFFF;
+	list-style-type:none;}

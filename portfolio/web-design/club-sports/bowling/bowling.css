@@ -1,0 +1,116 @@
+/* Club Bowling */
+
+body {background:#293F6F;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;}
+		
+p {color:#FFFFFF;
+	text-align:justify;
+	font-weight:300;}
+		
+h2 {color:#FFD11C;}
+
+.ie h2 {padding:15px 0px 7px 0px;}
+
+a {color:#4682B4;
+	text-decoration:none;}
+
+a:hover {color:#000000;}
+
+img {border:0px;}
+
+.container {width:1270px;
+	height:100%;
+	background:url(images/frame-row.png) repeat-y;
+	overflow:hidden;
+	margin:0 auto;}
+		
+.bar {width:155px;
+	height:100%;
+	float:left;
+	padding:0px 0px 0px 3px;}
+
+.top {width:1270px;
+	margin:3px auto 0px auto;}
+
+.logo {width:1115px;
+	height:110px;
+	background:url(images/frame-top.png) no-repeat;
+	margin-left:155px;}
+
+.logo img {margin:10px 0px 0px 296px;}
+
+.content {width:755px;
+	min-height:530px;
+	background:#293F6F;
+	padding:10px 20px;
+	margin:35px 0px 0px 260px;}
+		
+table.sch {text-align:center;
+	color:#FFFFFF;
+	font-size:16px;
+	font-weight:bold;
+	border-collapse:collapse;
+	margin:0 auto;}
+		
+.sch tr {height:40px;}
+		
+.sch td, th {border:4px ridge #000066;}
+
+td.head, th {font-size:18px;
+	color:#A67A00;
+	font-style:italic;}
+
+.footer {height:60px;
+	background:url(images/lane.jpg) bottom repeat-x;
+	position:relative;
+	padding:20px;
+	margin-left:3px;
+	border-top:5px ridge #FFFFFF;
+	border-bottom:5px ridge #FFFFFF;}
+		
+.about {padding-bottom:14px;}
+		
+.about img {float:left;
+	padding:20px;}
+		
+/* HOME Option */
+		
+ul#home {float:left;}
+
+ul#home li {height:79px;
+	position:absolute;
+	margin:25px 0px 0px 3px;
+	border-top:4px solid #376091;}
+		
+ul#home a:link, a.nav-item {padding:9px 0px 40px 8px;}
+
+/* Navigation Bar */
+		
+ul.nav {font-size:24px;
+	list-style:none;
+	padding:0px;
+	margin:0px;
+	border:solid #376091;
+	border-width:2px 0px;}
+		
+.nav li {width:148px;
+	height:79px;
+	display:block;
+	border:solid #376091;
+	border-width:2px 4px;}
+		
+.ie a.nav-item {padding-bottom:41px;}
+		
+.ie li.ie-margin {margin-bottom:-3px;}
+
+.ie li#ie-border {border-bottom:5px;
+	margin-bottom:-6px;}
+		
+a.nav-item {display:block;
+	color:#A67A00;
+	font-weight:bold;}
+		
+a:hover.nav-item {background:#A67A00;
+	color:#000000;}
