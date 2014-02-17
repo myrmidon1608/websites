@@ -1,0 +1,15 @@
+#<IfModule mod_rewrite.c>
+Options +FollowSymLinks +Indexes -MultiViews
+DirectoryIndex index.php
+# Turn mod_rewrite on
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{SCRIPT_FILENAME}  !-d
+
+#RewriteCond $1 !^(index\.php|images|robots\.txt)
+#RewriteRule ^(.*)$ /index.php/$1 [L]
+#RewriteRule ^(.*)index\.php$     /$1                [R=301,NC] 
+RewriteRule ^([A-Za-z0-9-]+)/?$  index.php?page=$1  [NC,L]
+#</IfModule>

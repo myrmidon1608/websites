@@ -2,7 +2,7 @@
 
     $page = (isset($_GET['page']) && !empty($_GET['page'])) ? $_GET['page'] : '';
 
-    include ('includes/_top.html');
+    include ('includes/_header.html');
     
     switch($page) {
         case 'contact':
@@ -19,8 +19,7 @@
             include ('includes/_home.html');
             break;
     }
-
-    include ('includes/_hours.html');
-    include ('includes/_bottom.html');
+    
+    include ('includes/_footer.html');
     
 ?>
