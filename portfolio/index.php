@@ -21,13 +21,13 @@
             include('includes/_blog/sidebar.php');
             break;
         case 'about':
-            include('about-me.html');
+            include('includes/_about/bio.html');
             break;
         default:
             include('includes/updates.php');
             include('includes/_home/header.html');
             include('includes/_home/update.php');
-            include('home.html');
+            include('includes/_home/menu.html');
             break;
     }
     include('includes/_footer.html');

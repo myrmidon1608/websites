@@ -1,16 +1,22 @@
 
 <header>
-    <div class="row-fluid" id="title">
-        <div class="span8">
-            <img src="img/logos/logo-grey.png" alt="" />
-            <ul>
-                <li id="titlePhrase"></li>
-                <li id="titleBrand">MYRMIDON<span>16</span></li>
-                <!--<li id="titleBrand">M<span>Y</span>RM<span>16</span>N</li>-->
-                <li id="titleName">Nicholas Moore</li>
-            </ul>
+    <div class="row" id="title">
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-xs-2 logo">
+                    <img src="core/img/logos/logo-grey.png" alt="" />
+                </div>
+                <div class="col-xs-10">
+                    <ul>
+                        <li id="titlePhrase"></li>
+                        <li id="titleBrand">MYRMIDON<span>16</span></li>
+                        <!--<li id="titleBrand">M<span>Y</span>RM<span>16</span>N</li>-->
+                        <li id="titleName">Nicholas Moore</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="span4">
+        <div class="col-sm-4 hidden-xs">
             <div class="progress">
                 <div class="bar" id="bar0"></div>
             </div>
@@ -25,19 +31,11 @@
 </header>
 
 <div id="content">
-    <div class="row-fluid">
-        <div class="span8">
+    <div class="row">
+        <div class="col-sm-8">
             <div id="socialBtn">
-                <a href="#" title="Blog">
-                    <div id="blogBtn"></div>
-                </a>
-                <a href="https://twitter.com/Myrmidon16" title="Twitter" target="_blank">
-                    <div id="twitterBtn"></div>
-                </a>
-                <a href="https://plus.google.com/u/0/106070971440033671896/posts" title="Google+" target="_blank">
-                    <div id="googleplusBtn"></div>
-                </a>
-                <a href="https://www.linkedin.com/in/myrmidon16/" title="LinkedIn" target="_blank">
-                    <div id="linkedinBtn"></div>
-                </a>
+                <a href="https://www.linkedin.com/in/myrmidon16/" title="LinkedIn" target="_blank" class="linkedinBtn"></a>
+                <a href="https://plus.google.com/u/0/106070971440033671896/posts" title="Google+" target="_blank" class="googleplusBtn"></a>
+                <a href="https://twitter.com/Myrmidon16" title="Twitter" target="_blank" class="twitterBtn"></a>
+                <a href="#" title="Blog" class="blogBtn"></a>
             </div>
