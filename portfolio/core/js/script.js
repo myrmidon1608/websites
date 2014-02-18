@@ -11,10 +11,8 @@ function init() {
     titleColor();
     generateProgress();
     homeMenu.init();
-}
-
-function index(value) {
-    return Math.floor(Math.random() * value);
+    
+    getUpdates();
 }
 
 /* -------------------------------- *\
@@ -23,7 +21,7 @@ function index(value) {
 
 function generateFact() {
     var titlePhrase = elementID('titlePhrase');
-	i = index(factList.length);
+	i = randomIndex(factList.length);
     
     titlePhrase.innerHTML = '';
 	titlePhrase.innerHTML = '<span id="factHolder">' + factList[i] + '</span>';
@@ -36,7 +34,7 @@ function generateFact() {
 function generateProgress() {
     for(var i = 0; i < skillProgress.length; i++) {
         var progressBar = elementID('bar' + i),
-            j = index(skillProgress[i].length);
+            j = randomIndex(skillProgress[i].length);
                 progressBar.innerHTML = skillProgress[i][j][0];
         progressBar.style.width = skillProgress[i][j][1] + '%';
     }
@@ -54,4 +52,30 @@ function titleColor() {
     for(i = 0; i < titleArray.length; i++) {
         titleBrand.innerHTML += '<span style="color:' + titleRainbow[i] + '">' + titleArray[i] + '</span>';
     }
+}
+
+/* -------------------------------- *\
+ * Updates                          *
+\* -------------------------------- */
+
+function getUpdates() {
+    $.getJSON( "data/updates.json", function(data) {
+        showRecentUpdate(data[data.length - 1]);
+    });
+}
+
+/* Display Most Recent Update */
+
+function showRecentUpdate(data) {
+    var parentNode = elementID('recentUpdate'),
+        newNode    = document.createElement('div'),
+        update = '';
+    
+    update += '<img src="core/img/updates/' + data.icon + '" alt="' + data.title + '" />';
+    update += '<h5>' + data.title + '</h5>';
+    update += '<p>' + data.date + '</p>';
+    update += '<p>' + data.summary + '</p>';
+    
+    newNode.innerHTML = update;
+    parentNode.insertBefore(newNode, parentNode.firstChild);
 }

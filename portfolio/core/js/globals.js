@@ -63,3 +63,7 @@ function splitString(stringToSplit, separator) {
         
     return splitString;
 };
+
+function randomIndex(value) {
+    return Math.floor(Math.random() * value);
+}

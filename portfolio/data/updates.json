@@ -1,0 +1,44 @@
+[
+    {
+        "title": "\"Bropocalypse\" Development Web Page Created",
+        "summary": "The website for the side-scrolling beat-em-up game <a href=\"http://myrmidon16.x10.mx/game-design/bropocalypse/index.php\" target=\"_blank\">\"Bropocalypse\"</a> has been added, which contains the overall information about the game, including the individual work done by each member of the development team.",
+        "date": "2012-06-19",
+        "icon": "bropoc.png"
+    },
+    {
+        "title": "Aon Insurance Internship Project Work Added",
+        "summary": "The various interactive marketing projects I worked on during my internship at Aon Insurance have been added under the \"Web Design\" tab in the portfolio section. Projects include HTML email campaign and banner ad designs.",
+        "date": "2012-06-25",
+        "icon": "aon.png"
+    },
+    {
+        "title": "Personal Brand Logo Added",
+        "summary": "In accordance with my <a href=\"downloads/my-brand.docx\">personal brand</a>, a logo has been developed and implemented on my portfolio website. This logo should be a visual reference to my web presence and the high quality of work I have produced.",
+        "date": "2012-06-29",
+        "icon": "logo.png"
+    },
+    {
+        "title": "\"Game Design\" Navigation Update",
+        "summary": "The navigation for my projects under the \"Game Design\" portfolio tab has been updated for optimum user interaction. Click on the representative icon in the top right to check out my work on the game, and feel free to send me any feedback.",
+        "date": "2012-07-18",
+        "icon": "game-icons.png"
+    },
+    {
+        "title": "\"About Me\" Information Moved to Left Tab Bar",
+        "summary": "In correspondence with my efforts to streamline the web site and compress all of the relevant information into a user-friendly design, I have moved the \"About Me\" information, including my resume and site Terms of Service, to the left tab bar, underneath the portfolios.",
+        "date": "2012-07-30",
+        "icon": "grad-thumb.png"
+    },
+    {
+        "title": "New Content and Navigation in \"Web Design\" Section",
+        "summary": "Check out the newly designed \"Web Design\" content, which includes the addition of my work from the TCNJ Intramural & Club Sports webmaster position I held and the updated navigation system, which works similarly to the \"Game Design\" navigation. Verge180 project work coming soon!",
+        "date": "2012-09-13",
+        "icon": "intra-links.png"
+    },
+    {
+        "title": "New Stuff. It's Everywhere.",
+        "summary": "Over the past few months I''ve randomly been making structural updates to areas of my site, including this spiffy new updates viewer and all that cool header content. It''s mainly been back-end work with updating old scripts (and adding some new ones). Mainly I just wanted to test the updates viewer. But there''s other stuff, too.",
+        "date": "2012-11-19",
+        "icon": "not-sure.png"
+    }
+]

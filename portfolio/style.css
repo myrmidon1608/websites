@@ -19,11 +19,11 @@ html, body {
 }
 	
 h1, h2, h3, h4, h5, h6 {
+    color:#3c504c;
     font-family:'myrFont', Verdana, Geneva, sans-serif;
-    color:#000000;
 }
 
-a:link, a:visited {
+a:link, a:hover, a:active, a:visited {
     color:#197365;
     font-weight:bold;
 }
@@ -156,7 +156,7 @@ header {
     float:right;
 }
 
-    #socialBtn a {
+    #socialBtn a:link, #socialBtn a:hover, #socialBtn a:active, #socialBtn a:visited {
         width:35px;
         height:35px;
         background-image:url('core/img/social-media.png');
@@ -164,7 +164,12 @@ header {
         background-size:140px 35px;
         display:block;
         float:left;
+        opacity:0.8;
         margin-right:10px;
+    }
+    
+    #socialBtn a:hover, #socialBtn a:active {
+        opacity:1;
     }
 
 .linkedinBtn {
@@ -193,13 +198,13 @@ header {
 	right:-14px;
     }
 
-.update p, .alert {
+#recentUpdate p, .alert {
     font-size:12px;
     line-height:1.3em;
     text-align:justify;
 }
 	
-.update img {
+#recentUpdate img {
     width:8%;
     min-width:40px;
     float:left;

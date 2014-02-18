@@ -12,7 +12,7 @@
     // Logged In User Bar
     if(logged_in()) include('includes/userbar.php');
     
-    $portfolioSection = isset($_GET['section']) ? $_GET['section'] : "";
+    $portfolioSection = isset($_GET['section']) ? $_GET['section'] : "home";
     
     switch($portfolioSection) {
         case 'blog':
@@ -23,11 +23,13 @@
         case 'about':
             include('includes/_about/bio.html');
             break;
-        default:
+        case 'home':
             include('includes/updates.php');
             include('includes/_home/header.html');
-            include('includes/_home/update.php');
+            if(!logged_in()) include('includes/_home/callout.html');
             include('includes/_home/menu.html');
+            break;
+        default:
             break;
     }
     include('includes/_footer.html');
