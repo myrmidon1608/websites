@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+
+    <title></title>
+	
+	<style type="text/css">
+     .preloadContainer {
+    	position: absolute;
+    	overflow: hidden;
+    	left: -9999px; 
+    	top: -9999px;
+    	height: 1px;
+    	width: 1px;
+	}
+
+	.preloadNode {
+    	background-repeat:no-repeat;
+    	background-position-x:-9999px;
+    	background-position-y:-9999px;
+	} 
+    </style>
+</head>
+    
+<body>
+    <!-- Preload Images: -->
+    <div class="preloadContainer"></div>
+    
+    
+	
+	<script>
+	function onPreload(imgArray, id) {
+        var myHolder = document.getElementsByClassName("preloadContainer");
+        myHolder.id = "preload" + id;
+ 
+        for(var idx=0; idx < imgArray.length; ++ idx) {
+            var preloadImgTag = document.createElement("img"),
+                preloadImgBG  = document.createElement("div");
+                
+            preloadImgTag.src = imgArray[idx];
+            preloadImgTag.width = 1;
+            preloadImgTag.height = 1;
+            preloadImgTag.alt = "";
+            myHolder.appendChild(preloadImgTag);
+            
+            preloadImgBG.className = "preloadNode";
+            preloadImgBG.style.backgroundImage="url('" + imgArray[idx] + "')";
+            if (myHolder.nextSibling) {
+                myHolder.parentNode.insertBefore(preloadImgBG, myHolder.nextSibling);
+            } else {
+                myHolder.parentNode.appendChild(myHolder);
+            }
+        }
+    }
+    </script>
+</body>
+</html>
+    
+    

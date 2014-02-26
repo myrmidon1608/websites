@@ -13,6 +13,10 @@ function init() {
     homeMenu.init();
     
     getUpdates();
+    
+    /* ON CLICK HANDLERS */
+    var homeLogo = elementID('homeLogo');
+    homeLogo.onclick = generateFact;
 }
 
 /* -------------------------------- *\
@@ -21,10 +25,16 @@ function init() {
 
 function generateFact() {
     var titlePhrase = elementID('titlePhrase');
-	i = randomIndex(factList.length);
+	i = randomIndex(factList.length),
+        newFact = factList[i];
     
-    titlePhrase.innerHTML = '';
-	titlePhrase.innerHTML = '<span id="factHolder">' + factList[i] + '</span>';
+    if(newFact != currentFact) {
+        titlePhrase.innerHTML = '';
+        titlePhrase.innerHTML = '<span id="factHolder">' + newFact + '</span>';
+        currentFact = newFact;
+    } else {
+        generateFact();
+    }
 }
 
 /* -------------------------------- *\
@@ -71,7 +81,7 @@ function showRecentUpdate(data) {
         newNode    = document.createElement('div'),
         update = '';
     
-    update += '<img src="core/img/updates/' + data.icon + '" alt="' + data.title + '" />';
+    update += '<div class="icon"><div style="background-image:url(\'core/img/updates/' + data.icon + '\');"></div></div>';
     update += '<h5>' + data.title + '</h5>';
     update += '<p>' + data.date + '</p>';
     update += '<p>' + data.summary + '</p>';

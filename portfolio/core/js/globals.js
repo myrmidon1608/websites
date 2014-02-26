@@ -3,14 +3,16 @@
 \* -------------------------------- */
 
 var factList = new Array(
-	"Unconventionally Creative",
-	"Expert Googler",
-	"Internet Culture Aficionado",
-	"Photoshop Wizard",
-	"Gaming Connoisseur",
-	"Programming Guru",
+    "Unconventionally Creative",
+    "Expert Googler",
+    "Internet Culture Aficionado",
+    "Photoshop Wizard",
+    "Gaming Connoisseur",
+    "Programming Guru",
     "Professionally Ametuer"
 ),
+
+currentFact = '',
 
 skillProgress = new Array(
     new Array(["JavaScript", 60], ["PHP", 60], ["ActionScript", 40]),

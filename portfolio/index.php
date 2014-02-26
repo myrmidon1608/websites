@@ -17,7 +17,7 @@
     switch($portfolioSection) {
         case 'blog':
             include('includes/_blog/header.html');
-            include('blog.php');
+            include('includes/_blog/content.html');
             include('includes/_blog/sidebar.php');
             break;
         case 'about':
