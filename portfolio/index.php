@@ -13,12 +13,18 @@
     if(logged_in()) include('includes/userbar.php');
     
     $portfolioSection = isset($_GET['section']) ? $_GET['section'] : "home";
+    $blogPost = isset($_GET['post']) ? $_GET['post'] : 0;
     
     switch($portfolioSection) {
         case 'blog':
-            include('includes/_blog/header.html');
+            if($blogPost !== 0) {
+                include('blog/_site/' . $blogPost . '.html');
+            } else {
+                include('blog/_site/index.html');
+            }
+            /*include('includes/_blog/header.html');
             include('includes/_blog/content.html');
-            include('includes/_blog/sidebar.php');
+            include('includes/_blog/sidebar.php');*/
             break;
         case 'about':
             include('includes/_about/bio.html');

@@ -1,0 +1,6 @@
+
+markdown: redcarpet
+pygments: false
+
+name: "Myrmidon 16: Empty Spaces"
+root: "index.php?section=blog&post="

@@ -1,0 +1,39 @@
+    
+    <header>
+        <div class="row" id="blog">
+            <div class="col-xs-10" id="blogMainTitle">
+                <a href="index.php?section=blog"><img src="core/img/logos/empty-spaces.png" id="blogLogo1" alt="Empty Spaces" /></a>
+                <div id="blogTag">What I Live For</div>
+            </div>
+            <div class="col-xs-2">
+                <img src="core/img/logos/logo-blk.png" id="blogLogo2" alt="" />
+            </div>
+        </div>
+    </header>
+
+    <div class="col-sm-9" id="blogMainContent">
+        {{ content }}
+    </div>
+
+    <div class="col-sm-3">
+        <h4><a href="index.php?section=about">About Me</a></h4>
+        <h4>Archive</h4>
+        <div id="blogArchive">
+        {% for post in site.posts %}
+        
+            {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
+            {% if currentyear != year %}
+            <p class="year">{{ currentyear }}</p>
+            {% capture year %}{{currentyear}}{% endcapture %}
+
+            {% capture currentmonth %}{{post.date | date: "%B"}}{% endcapture %}
+                {% if currentmonth != month %}
+                    <p class="month">{{ currentmonth }}</p>
+                    {% capture month %}{{currentmonth}}{% endcapture %}
+                {% endif %}
+                
+            {% endif %}
+            <p class="post-link"><a href="{{ site.root }}{{ post.name }}">{{ post.title }}</a></p>
+        {% endfor %}
+        </div>
+    </div>

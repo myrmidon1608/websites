@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+<div class="post">
+    <h3><a href="{{ site.root }}{{ post.name }}">{{ post.title }}</a></h3>
+    {{ post.content }}
+</div>
+{% endfor %}

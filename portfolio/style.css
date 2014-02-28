@@ -342,6 +342,25 @@ header {
     border-right:2px dashed #197365;
 }
 
+#blogArchive {
+    
+}
+
+    #blogArchive .year {
+        font-weight:bold;
+        color:#197365;
+        margin-left:10px;
+    }
+
+    #blogArchive .month {
+        color:#197365;
+        margin-left:20px;
+    }
+
+    #blogArchive .post-link {
+        margin-left:30px;
+    }
+
 @media (max-width: 1200px) {
     
     #currentItem {
