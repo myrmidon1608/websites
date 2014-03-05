@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks +Indexes -MultiViews
+DirectoryIndex index.php
+# Turn mod_rewrite on
+RewriteEngine On
+RewriteBase /websites/portfolio/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([A-Za-z0-9-]+)/?$  index.php?page=$1  [NC,L]
+</IfModule>
