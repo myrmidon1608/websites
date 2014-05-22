@@ -123,18 +123,7 @@
     			"name": "Mixed Gloves",
     			"price": "15.00",
     			"size": "12\""
-    		},
-    		{
-    			"img": "bauer300-shin.png",
-    			"name": "Bauer 300 Shin",
-    			"price": "",
-    			"size": "8\""
-    		},
-    		{
-    			"img": "vic-shin.png",
-    			"name": "Vic Shin",
-    			"price": "10.00",
-    			"size": "12\""
+ 
     		},
     		{
     			"img": "reebok-shin.png",
@@ -153,12 +142,7 @@
     			"name": "Easton",
     			"price": "15.00",
     			"size": "13\""
-    		},
-    		{
-    			"img": "reebok2k-elbow.png",
-    			"name": "Reebok 2K",
-    			"price": "15.00",
-    			"size": "Yth Med"
+   
     		},
     		{
     			"img": "wwmed-elbow.png",
@@ -201,55 +185,20 @@
     			"name": "Koho",
     			"price": "25.00",
     			"size": "Jr Small"
-    		},
-    		{
-    			"img": "ccmfit-shoulder.png",
-    			"name": "CCM U07",
-    			"price": "25.00",
-    			"size": "Jr Med"
-    		},
-    		{
-    			"img": "bauer3000-shoulder.png",
-    			"name": "CCM Power",
-    			"price": "",
-    			"size": "Jr Med"
-    		},
-    		{
-    			"img": "ccm-power-shoulder.png",
-    			"name": "Bauer 3000",
-    			"price": "",
-    			"size": "Jr Lrg"
+    	
     		},
     		{
     			"img": "reebok2k-shoulder.png",
     			"name": "Reebok 2K",
     			"price": "25.00",
     			"size": "Jr Lrg"
-    		},
-    		{
-    			"img": "bauer95-shoulder.png",
-    			"name": "Easton S19",
-    			"price": "30.00",
-    			"size": "Sr Small"
+    	
     		},
     		{
     			"img": "sherwood-shoulder.png",
     			"name": "Sherwood Classic",
     			"price": "15.00",
     			"size": "Sr Lrg"
-    		},
-    		{
-    			"img": "warrior-shoulder.png",
-    			"name": "Warrior",
-    			"price": "25.00",
-    			"size": "Sr Lrg"
-    		},
-    		
-    		{
-    			"img": "ccm-bag.png",
-    			"name": "CCM Bag",
-    			"price": "20.00",
-    			"size": "Jr"
     		}
     	]
     },
@@ -353,18 +302,7 @@
     			"name": "Heaton",
     			"price": "",
     			"size": "Sr"
-    		},
-    		{
-    			"img": "gear/brians-goalpad.png",
-    			"name": "Brians Air Hook",
-    			"price": "50.00",
-    			"size": "26\""
-    		},
-    		{
-    			"img": "gear/sherwoodpads.png",
-    			"name": "Sherwood C5",
-    			"price": "190.00",
-    			"size": "36\""
+   
     		},
     		{
     			"img": "gear/koho-goalpad.png",
@@ -433,12 +371,6 @@
     			"name": "Riedell White",
     			"price": "25.00",
     			"size": "Yth 11"
-    		},
-    		{
-    			"img": "skates/skate-black.png.png",
-    			"name": "Black Figure",
-    			"price": "15.00",
-    			"size": "Sr 1"
     		}
     	]
     }

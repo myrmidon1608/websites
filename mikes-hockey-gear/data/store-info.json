@@ -1,6 +1,6 @@
 {
 	"alert": [
-		"<h3>We Buy &amp; Sell <a href=\"/used/\">USED GEAR</a></h3><p><h2>MHG Wintersport and BCI will be CLOSED TODAY, 1/21/14, due to snow</h2></p>"
+		"<h3>We Buy &amp; Sell <a href=\"/used/\">USED GEAR</a></h3><p>\"MHG WS is in Spring hours,only open Saturday and Sunday 1200PM-700PM<p>\"MHG BCI HOURS DO NOT CHANGE<p>\"HELP WANTED  APPLY BCI</p>"
 	],
     
     "about": [
@@ -32,13 +32,13 @@
         "address": "551 N. York Road<br />Willow Grove, PA 19090",
         "sales": "",
         "hours": {
-        	"mon": "5:00PM-9:00PM",
-        	"tues": "5:00PM-9:00PM",
-        	"wed": "5:00PM-9:00PM",
-        	"thurs": "5:00PM-9:00PM",
+        	"mon": "<span class=\"text-danger\">CLOSED</span>",
+        	"tues": "<span class=\"text-danger\">CLOSED</span>",
+        	"wed": "<span class=\"text-danger\">CLOSED</span>",
+        	"thurs": "<span class=\"text-danger\">CLOSED</span>",
         	"fri": "<span class=\"text-danger\">CLOSED</span>",
-        	"sat": "12:00PM-9:00PM",
-        	"sun": "12:00PM-9:00PM"
+        	"sat": "12:00PM-7:00PM",
+        	"sun": "12:00PM-7:00PM"
         }
     }
 }
