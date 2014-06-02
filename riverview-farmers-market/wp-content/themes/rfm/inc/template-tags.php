@@ -1,198 +1,334 @@
 <?php
 /**
- * Custom template tags for Twenty Fourteen
+ * Custom template tags for this theme.
  *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
- */
-
-if ( ! function_exists( 'twentyfourteen_paging_nav' ) ) :
-/**
- * Display navigation to next/previous set of posts when applicable.
+ * Eventually, some of the functionality here could be replaced by core features
  *
- * @since Twenty Fourteen 1.0
+ * @package deLighted
  */
-function twentyfourteen_paging_nav() {
-	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-		return;
-	}
-
-	$paged        = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
-	$pagenum_link = html_entity_decode( get_pagenum_link() );
-	$query_args   = array();
-	$url_parts    = explode( '?', $pagenum_link );
-
-	if ( isset( $url_parts[1] ) ) {
-		wp_parse_str( $url_parts[1], $query_args );
-	}
-
-	$pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
-	$pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
-
-	$format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
-	$format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
-
-	// Set up paginated links.
-	$links = paginate_links( array(
-		'base'     => $pagenum_link,
-		'format'   => $format,
-		'total'    => $GLOBALS['wp_query']->max_num_pages,
-		'current'  => $paged,
-		'mid_size' => 1,
-		'add_args' => array_map( 'urlencode', $query_args ),
-		'prev_text' => __( '&larr; Previous', 'twentyfourteen' ),
-		'next_text' => __( 'Next &rarr;', 'twentyfourteen' ),
-	) );
-
-	if ( $links ) :
-
-	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'twentyfourteen' ); ?></h1>
-		<div class="pagination loop-pagination">
-			<?php echo $links; ?>
-		</div><!-- .pagination -->
-	</nav><!-- .navigation -->
-	<?php
-	endif;
-}
-endif;
-
-if ( ! function_exists( 'twentyfourteen_post_nav' ) ) :
-/**
- * Display navigation to next/previous post when applicable.
- *
- * @since Twenty Fourteen 1.0
- */
-function twentyfourteen_post_nav() {
-	// Don't print empty markup if there's nowhere to navigate.
-	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
-
-	if ( ! $next && ! $previous ) {
-		return;
-	}
-
-	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'twentyfourteen' ); ?></h1>
-		<div class="nav-links">
-			<?php
-			if ( is_attachment() ) :
-				previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'twentyfourteen' ) );
-			else :
-				previous_post_link( '%link', __( '<span class="meta-nav">Previous Post</span>%title', 'twentyfourteen' ) );
-				next_post_link( '%link', __( '<span class="meta-nav">Next Post</span>%title', 'twentyfourteen' ) );
-			endif;
-			?>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
-}
-endif;
-
-if ( ! function_exists( 'twentyfourteen_posted_on' ) ) :
-/**
- * Print HTML with meta information for the current post-date/time and author.
- *
- * @since Twenty Fourteen 1.0
- */
-function twentyfourteen_posted_on() {
-	if ( is_sticky() && is_home() && ! is_paged() ) {
-		echo '<span class="featured-post">' . __( 'Sticky', 'twentyfourteen' ) . '</span>';
-	}
-
-	// Set up and print post meta information.
-	printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
-		esc_url( get_permalink() ),
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		get_the_author()
-	);
-}
-endif;
 
 /**
- * Find out if blog has more than one category.
+ * Display navigation to next/previous pages when applicable
  *
- * @since Twenty Fourteen 1.0
- *
- * @return boolean true if blog has more than 1 category
+ * @since 1.0
  */
-function twentyfourteen_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'twentyfourteen_category_count' ) ) ) {
-		// Create an array of all the categories that are attached to posts
-		$all_the_cool_cats = get_categories( array(
-			'hide_empty' => 1,
+
+if ( ! function_exists( 'delighted_content_nav' ) ) {
+
+	function delighted_content_nav( $nav_id ) {
+		global $wp_query, $post;
+	
+		// Don't print empty markup on single pages if there's nowhere to navigate.
+		if ( is_single() ) {
+			$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
+			$next = get_adjacent_post( false, '', false );
+	
+			if ( ! $next && ! $previous )
+				return;
+		}
+	
+		// Don't print empty markup in archives if there's only one page.
+		if ( $wp_query->max_num_pages < 2 && ( is_home() || is_archive() || is_search() ) )
+			return;
+	
+		$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation';
+	
+		?>
+		<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
+			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'delighted' ); ?></h1>
+	
+		<?php if ( is_single() ) : // navigation links for single posts ?>
+	
+			<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'delighted' ) . '</span> %title' ); ?>
+			<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'delighted' ) . '</span>' ); ?>
+	
+		<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
+	
+			<?php if ( get_next_posts_link() ) : ?>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'delighted' ) ); ?></div>
+			<?php endif; ?>
+	
+			<?php if ( get_previous_posts_link() ) : ?>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'delighted' ) ); ?></div>
+			<?php endif; ?>
+	
+		<?php endif; ?>
+	
+		</nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
+		<?php
+	}
+
+} // endif delighted_content_nav
+
+
+/**
+ * Create pagination for archive pages
+ *
+ * @since 1.0
+ */
+
+if ( ! function_exists( 'delighted_pagination' ) ) {
+
+	function delighted_pagination( $max_num_pages = '' ) {
+	
+		if( empty( $max_num_pages ) ) {
+			global $wp_query;
+			$total = $wp_query->max_num_pages;
+		} else {
+			$total = $max_num_pages;
+		}
+	
+		// need an unlikely integer
+	    $big = 999999999;
+	    
+	    // Make sure paging works
+					
+		if ( get_query_var( 'paged' ) ) {
+		        $paged = get_query_var( 'paged' );
+		} elseif ( get_query_var( 'page' ) ) {
+		        $paged = get_query_var( 'page' );
+		} else {
+		        $paged = 1;
+		}
+	    
+	    $args = array(
+	    	'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+			'format' => '?paged=%#%',
+			'current' => max( 1, $paged ),
+			'total' => $total,
+			'mid_size' => 4,
+			'prev_text'    => '&larr; ' . __( 'Previous', 'delighted' ),
+			'next_text'    => __( 'Next', 'delighted' ) . ' &rarr;',
+			'type' => 'list'
+		);
+		
+		$pagination = apply_filters( 'delighted_pagination_args', paginate_links( $args ) );
+		
+		if( empty( $pagination ) )
+			return;
+			
+		// Create pagination output
+		
+		$pagination = '<div class="pagination pagination-numbers">' . "\n";		
+		$pagination .= paginate_links( $args );		
+		$pagination .= '</div><!-- .pagination -->' . "\n";
+		
+		// Place active class on li
+		
+		$pagination = str_replace( '<li><span class=\'page-numbers current\'>', '<li class="active"><a href="#"><span class=\'page-numbers current\'>', $pagination );
+		$pagination = str_replace( '</span>', '</span></a>', $pagination );
+		
+		// Place disabled class on li
+		
+		$pagination = str_replace( '<li><span class="page-numbers dots">', '<li class="disabled"><a href="#"><span class="page-numbers dots">', $pagination );
+		
+		echo apply_filters( 'delighted_pagination', $pagination );
+	 
+	}
+
+} // endif delighted_pagination
+
+
+/**
+ * Template for comments and pingbacks.
+ *
+ * Used as a callback by wp_list_comments() for displaying the comments.
+ *
+ * @since 1.0
+ */
+
+if ( ! function_exists( 'delighted_comment' ) ) {
+
+	function delighted_comment( $comment, $args, $depth ) {
+		$GLOBALS['comment'] = $comment;
+	
+		if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
+	
+		<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
+			<div class="comment-body">
+				<?php _e( 'Pingback:', 'delighted' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'delighted' ), '<span class="edit-link">', '</span>' ); ?>
+			</div>
+	
+		<?php else : ?>
+	
+		<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
+			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+						<?php printf( __( '%s <span class="says">says:</span>', 'delighted' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					</div><!-- .comment-author -->
+	
+					<div class="comment-metadata">
+						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+							<time datetime="<?php comment_time( 'c' ); ?>">
+								<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'delighted' ), get_comment_date(), get_comment_time() ); ?>
+							</time>
+						</a>
+						<?php edit_comment_link( __( 'Edit', 'delighted' ), '<span class="edit-link">', '</span>' ); ?>
+					</div><!-- .comment-metadata -->
+	
+					<?php if ( '0' == $comment->comment_approved ) : ?>
+					<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'delighted' ); ?></p>
+					<?php endif; ?>
+				</footer><!-- .comment-meta -->
+	
+				<div class="comment-content">
+					<?php comment_text(); ?>
+				</div><!-- .comment-content -->
+	
+				<?php
+					comment_reply_link( array_merge( $args, array(
+						'add_below' => 'div-comment',
+						'depth'     => $depth,
+						'max_depth' => $args['max_depth'],
+						'before'    => '<div class="reply">',
+						'after'     => '</div>',
+					) ) );
+				?>
+			</article><!-- .comment-body -->
+	
+		<?php
+		endif;
+	}
+
+} // endif check for delighted_comment()
+
+
+/**
+ * Prints the attached image with a link to the next attached image.
+ *
+ * @since 1.0
+ */
+
+if ( ! function_exists( 'delighted_the_attached_image' ) ) {
+
+	function delighted_the_attached_image() {
+		$post                = get_post();
+		$attachment_size     = apply_filters( 'delighted_attachment_size', 'full' );
+		$next_attachment_url = wp_get_attachment_url();
+	
+		/**
+		 * Grab the IDs of all the image attachments in a gallery so we can get the
+		 * URL of the next adjacent image in a gallery, or the first image (if
+		 * we're looking at the last image in a gallery), or, in a gallery of one,
+		 * just the link to that image file.
+		 */
+		$attachment_ids = get_posts( array(
+			'post_parent'    => $post->post_parent,
+			'fields'         => 'ids',
+			'numberposts'    => -1,
+			'post_status'    => 'inherit',
+			'post_type'      => 'attachment',
+			'post_mime_type' => 'image',
+			'order'          => 'ASC',
+			'orderby'        => 'menu_order ID'
 		) );
-
-		// Count the number of categories that are attached to the posts
-		$all_the_cool_cats = count( $all_the_cool_cats );
-
-		set_transient( 'twentyfourteen_category_count', $all_the_cool_cats );
+	
+		// If there is more than 1 attachment in a gallery...
+		if ( count( $attachment_ids ) > 1 ) {
+			foreach ( $attachment_ids as $attachment_id ) {
+				if ( $attachment_id == $post->ID ) {
+					$next_id = current( $attachment_ids );
+					break;
+				}
+			}
+	
+			// get the URL of the next image attachment...
+			if ( $next_id )
+				$next_attachment_url = get_attachment_link( $next_id );
+	
+			// or get the URL of the first image attachment.
+			else
+				$next_attachment_url = get_attachment_link( array_shift( $attachment_ids ) );
+		}
+	
+		printf( '<a href="%1$s" rel="attachment">%2$s</a>',
+			esc_url( $next_attachment_url ),
+			wp_get_attachment_image( $post->ID, $attachment_size )
+		);
 	}
 
-	if ( 1 !== (int) $all_the_cool_cats ) {
-		// This blog has more than 1 category so twentyfourteen_categorized_blog should return true
-		return true;
-	} else {
-		// This blog has only 1 category so twentyfourteen_categorized_blog should return false
-		return false;
-	}
-}
+} // endif delighted_the_attached_image
+
 
 /**
- * Flush out the transients used in twentyfourteen_categorized_blog.
+ * Prints HTML with meta information for the current post-date/time and author.
  *
- * @since Twenty Fourteen 1.0
+ * @since 1.0
  */
-function twentyfourteen_category_transient_flusher() {
+
+if ( ! function_exists( 'delighted_posted_on' ) ) {
+
+	function delighted_posted_on() {
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) )
+			$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
+	
+		$time_string = sprintf( $time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
+	
+		printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'delighted' ),
+			sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
+				esc_url( get_permalink() ),
+				$time_string
+			),
+			sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>',
+				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+				esc_html( get_the_author() )
+			)
+		);
+	}
+
+} // endif delighted_posted_on
+
+
+/**
+ * Returns true if a blog has more than 1 category
+ *
+ * @since 1.0
+ */
+ 
+if ( ! function_exists( 'delighted_categorized_blog' ) ) {
+
+	function delighted_categorized_blog() {
+	
+		if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
+			// Create an array of all the categories that are attached to posts
+			$all_the_cool_cats = get_categories( array(
+				'hide_empty' => 1,
+			) );
+	
+			// Count the number of categories that are attached to the posts
+			$all_the_cool_cats = count( $all_the_cool_cats );
+	
+			set_transient( 'all_the_cool_cats', $all_the_cool_cats );
+		}
+	
+		if ( '1' != $all_the_cool_cats ) {
+			// This blog has more than 1 category so delighted_categorized_blog should return true
+			return true;
+		} else {
+			// This blog has only 1 category so delighted_categorized_blog should return false
+			return false;
+		}
+	}
+
+} // ebdif delighted_posted_on
+
+
+/**
+ * Flush out the transients used in delighted_categorized_blog
+ */
+
+add_action( 'edit_category', 'delighted_category_transient_flusher' );
+add_action( 'save_post',     'delighted_category_transient_flusher' );
+
+function delighted_category_transient_flusher() {
 	// Like, beat it. Dig?
-	delete_transient( 'twentyfourteen_category_count' );
-}
-add_action( 'edit_category', 'twentyfourteen_category_transient_flusher' );
-add_action( 'save_post',     'twentyfourteen_category_transient_flusher' );
-
-/**
- * Display an optional post thumbnail.
- *
- * Wraps the post thumbnail in an anchor element on index
- * views, or a div element when on single views.
- *
- * @since Twenty Fourteen 1.0
- */
-function twentyfourteen_post_thumbnail() {
-	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
-		return;
-	}
-
-	if ( is_singular() ) :
-	?>
-
-	<div class="post-thumbnail">
-	<?php
-		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
-			the_post_thumbnail( 'twentyfourteen-full-width' );
-		} else {
-			the_post_thumbnail();
-		}
-	?>
-	</div>
-
-	<?php else : ?>
-
-	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
-	<?php
-		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
-			the_post_thumbnail( 'twentyfourteen-full-width' );
-		} else {
-			the_post_thumbnail();
-		}
-	?>
-	</a>
-
-	<?php endif; // End is_singular()
+	delete_transient( 'all_the_cool_cats' );
 }

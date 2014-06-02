@@ -1,31 +1,43 @@
 <?php
 /**
- * The template used for displaying page content
+ * The template used for displaying page content in page.php
  *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @package deLighted
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php
-		// Page thumbnail and title.
-		twentyfourteen_post_thumbnail();
-		the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1></header><!-- .entry-header -->' );
-	?>
+
+	<header class="entry-header">
+	
+		<div class="entry-title page-title title">
+			<h1><?php the_title(); ?></h1>
+		</div>
+
+	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-			the_content();
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfourteen' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-			) );
+	
+		<?php if( has_post_thumbnail() ) { ?>
+		
+			<?php 
+				// Set thumb size according to page template
+				$size = is_page_template( 'tpl-page-full.php' ) ? 'full' : 'big';
+			?>
+		
+			<div class="entry-image"><?php the_post_thumbnail( $size, array( 'alt' => get_the_title(), 'title' => get_the_title() ) ); ?></div>
+		
+		<?php } ?>
 
-			edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
+		<?php the_content(); ?>
+
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'delighted' ),
+				'after'  => '</div>',
+			) );
 		?>
+
 	</div><!-- .entry-content -->
-</article><!-- #post-## -->
+
+</article><!-- #post-<?php the_ID(); ?> -->

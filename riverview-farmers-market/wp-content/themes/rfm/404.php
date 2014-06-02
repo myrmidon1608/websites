@@ -1,32 +1,38 @@
 <?php
 /**
- * The template for displaying 404 pages (Not Found)
+ * The template for displaying 404 pages (Not Found).
  *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @package deLighted
  */
 
 get_header(); ?>
 
+	<div id="primary" class="content-area full-width">
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+		<main id="main" class="site-main" role="main">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php _e( 'Not Found', 'twentyfourteen' ); ?></h1>
-			</header>
+			<section class="error-404 not-found">
 
-			<div class="page-content">
-				<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfourteen' ); ?></p>
+				<header class="page-header">
 
-				<?php get_search_form(); ?>
-			</div><!-- .page-content -->
+					<div class="page-title entry-title title">
+						<h1><?php _e( 'Oops! That page can&rsquo;t be found', 'delighted' ); ?></h1>
+					</div>
 
-		</div><!-- #content -->
+				</header><!-- .page-header -->
+
+				<div class="page-content">
+				
+					<p><?php _e( 'It looks like nothing was found at this location. Maybe try the search below?', 'delighted' ); ?></p>
+
+					<?php get_search_form(); ?>
+
+				</div><!-- .page-content -->
+
+			</section><!-- .error-404 -->
+
+		</main><!-- #main -->
+
 	</div><!-- #primary -->
 
-<?php
-get_sidebar( 'content' );
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

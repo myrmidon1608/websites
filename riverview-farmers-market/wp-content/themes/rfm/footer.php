@@ -1,28 +1,34 @@
 <?php
 /**
- * The template for displaying the footer
+ * The template for displaying the footer.
  *
- * Contains footer content and the closing of the #main and #page div elements.
+ * Contains the closing of the #content div and all content after
  *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @package deLighted
  */
 ?>
 
-		</div><!-- #main -->
+		</div><!-- #content -->
+		
+	</div><!-- #content-wrap -->
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer" role="contentinfo">
 
-			<?php get_sidebar( 'footer' ); ?>
+		<div class="site-info">
 
-			<div class="site-info">
-				<?php do_action( 'twentyfourteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyfourteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfourteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
-	</div><!-- #page -->
+			<?php do_action( 'delighted_credits' ); ?>
+			
+			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'delighted' ), 'WordPress' ); ?></a>
+			<span class="sep"> | </span>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'delighted' ), 'deLighted', '<a href="http://themeshift.com" rel="designer">ThemeShift</a>' ); ?>
 
-	<?php wp_footer(); ?>
+		</div><!-- .site-info -->
+
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
 </body>
 </html>

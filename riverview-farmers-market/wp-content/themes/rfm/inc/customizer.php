@@ -1,109 +1,142 @@
 <?php
 /**
- * Twenty Fourteen Theme Customizer support
+ * delighted Theme Customizer
  *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @package deLighted
  */
 
 /**
- * Implement Theme Customizer additions and adjustments.
+ * Add postMessage support for site title and description for the Theme Customizer.
  *
- * @since Twenty Fourteen 1.0
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object
+ * @since 1.0
  */
-function twentyfourteen_customize_register( $wp_customize ) {
-	// Add custom description to Colors and Background sections.
-	$wp_customize->get_section( 'colors' )->description           = __( 'Background may only be visible on wide screens.', 'twentyfourteen' );
-	$wp_customize->get_section( 'background_image' )->description = __( 'Background may only be visible on wide screens.', 'twentyfourteen' );
+ 
+add_action( 'customize_register', 'delighted_customize_register' );
 
-	// Add postMessage support for site title and description.
+function delighted_customize_register( $wp_customize ) {
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-	// Rename the label to "Site Title Color" because this only affects the site title in this theme.
-	$wp_customize->get_control( 'header_textcolor' )->label = __( 'Site Title Color', 'twentyfourteen' );
-
-	// Rename the label to "Display Site Title & Tagline" in order to make this option extra clear.
-	$wp_customize->get_control( 'display_header_text' )->label = __( 'Display Site Title &amp; Tagline', 'twentyfourteen' );
-
-	// Add the featured content section in case it's not already there.
-	$wp_customize->add_section( 'featured_content', array(
-		'title'       => __( 'Featured Content', 'twentyfourteen' ),
-		'description' => sprintf( __( 'Use a <a href="%1$s">tag</a> to feature your posts. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'twentyfourteen' ),
-			esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'twentyfourteen' ), admin_url( 'edit.php' ) ) ),
-			admin_url( 'edit.php?show_sticky=1' )
-		),
-		'priority'    => 130,
-	) );
-
-	// Add the featured content layout setting and control.
-	$wp_customize->add_setting( 'featured_content_layout', array(
-		'default'           => 'grid',
-		'sanitize_callback' => 'twentyfourteen_sanitize_layout',
-	) );
-
-	$wp_customize->add_control( 'featured_content_layout', array(
-		'label'   => __( 'Layout', 'twentyfourteen' ),
-		'section' => 'featured_content',
-		'type'    => 'select',
-		'choices' => array(
-			'grid'   => __( 'Grid',   'twentyfourteen' ),
-			'slider' => __( 'Slider', 'twentyfourteen' ),
-		),
-	) );
 }
-add_action( 'customize_register', 'twentyfourteen_customize_register' );
+
 
 /**
- * Sanitize the Featured Content layout value.
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  *
- * @since Twenty Fourteen 1.0
- *
- * @param string $layout Layout type.
- * @return string Filtered layout type (grid|slider).
+ * @since 1.0
  */
-function twentyfourteen_sanitize_layout( $layout ) {
-	if ( ! in_array( $layout, array( 'grid', 'slider' ) ) ) {
-		$layout = 'grid';
+ 
+add_action( 'customize_preview_init', 'delighted_customize_preview_js' );
+
+function delighted_customize_preview_js() {
+	wp_enqueue_script( 'delighted_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20131017', true );
+}
+
+
+/**
+ * Register custom customizer logo options
+ *
+ * @since 1.0
+ */
+
+add_action( 'customize_register', 'delighted_customize_register_logo' );
+
+function delighted_customize_register_logo( $wp_customize ) {
+	
+	// Add setting logo
+	
+	$wp_customize->add_setting(
+		'logo',
+		array(
+			'default' 		=> get_template_directory_uri() . '/img/logo.png',
+			'type' 			=> 'option'
+		)
+	);
+	
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'customize_logo',
+			array(
+			    'label'    => __( 'Logo', 'delighted' ),
+			    'section'  => 'title_tagline',
+			    'settings' => 'logo',
+			)
+		)
+	);
+
+}
+
+
+/**
+ * Register custom customizer color options
+ *
+ * @since 1.0
+ */
+
+add_action( 'customize_register', 'delighted_customize_register_color' );
+
+function delighted_customize_register_color( $wp_customize ) {
+	
+	// Add setting link color
+	
+	$wp_customize->add_setting(
+		'accent_color',
+		array(
+			'default' 		=> '#71616b',
+			'type' 			=> 'theme_mod'
+		)
+	);
+	
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'customize_link_color',
+			array(
+			    'label'    => __( 'Accent Color', 'delighted' ),
+			    'section'  => 'colors',
+			    'settings' => 'accent_color',
+			)
+		)
+	);
+
+}
+
+
+/**
+ * Add theme mods CSS from
+ * theme options to header
+ *
+ * @since 1.0
+ */
+ 
+add_action( 'wp_head', 'delighted_do_theme_mods_css' );
+
+function delighted_do_theme_mods_css() {
+
+	$mods = '';
+	$accent_color = '';
+	
+	// Set accent color
+	
+	$accent_color .= delighted_generate_css( 'a, a:visited, a:hover, a:focus, a:active, .site-branding em, .entry-title h1 a:hover, .entry-title-meta span', 'color', 'accent_color' );
+	$accent_color .= delighted_generate_css( '.main-navigation ul ul a:hover', 'color', 'accent_color', false, ' !important' );
+	$accent_color .= delighted_generate_css( '.label, button, .button, html input[type="button"], input[type="reset"], input[type="submit"], button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, button:focus, html input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:active, html input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active, #wp-calendar caption', 'background-color', 'accent_color' );
+	
+	if( ! empty( $accent_color ) )
+		$mods .= $accent_color;
+	
+	if( ! empty( $mods ) ) {	
+	
+		$css  = '<style type="text/css" media="screen">';
+		$css .= $mods;
+		$css .= '</style>' . "\n";
+		
+		echo $css;
+		
 	}
 
-	return $layout;
 }
-
-/**
- * Bind JS handlers to make Theme Customizer preview reload changes asynchronously.
- *
- * @since Twenty Fourteen 1.0
- */
-function twentyfourteen_customize_preview_js() {
-	wp_enqueue_script( 'twentyfourteen_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20131205', true );
-}
-add_action( 'customize_preview_init', 'twentyfourteen_customize_preview_js' );
-
-/**
- * Add contextual help to the Themes and Post edit screens.
- *
- * @since Twenty Fourteen 1.0
- */
-function twentyfourteen_contextual_help() {
-	if ( 'admin_head-edit.php' === current_filter() && 'post' !== $GLOBALS['typenow'] ) {
-		return;
-	}
-
-	get_current_screen()->add_help_tab( array(
-		'id'      => 'twentyfourteen',
-		'title'   => __( 'Twenty Fourteen', 'twentyfourteen' ),
-		'content' =>
-			'<ul>' .
-				'<li>' . sprintf( __( 'The home page features your choice of up to 6 posts prominently displayed in a grid or slider, controlled by a <a href="%1$s">tag</a>; you can change the tag and layout in <a href="%2$s">Appearance &rarr; Customize</a>. If no posts match the tag, <a href="%3$s">sticky posts</a> will be displayed instead.', 'twentyfourteen' ), esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'twentyfourteen' ), admin_url( 'edit.php' ) ) ), admin_url( 'customize.php' ), admin_url( 'edit.php?show_sticky=1' ) ) . '</li>' .
-				'<li>' . sprintf( __( 'Enhance your site design by using <a href="%s">Featured Images</a> for posts you&rsquo;d like to stand out (also known as post thumbnails). This allows you to associate an image with your post without inserting it. Twenty Fourteen uses featured images for posts and pages&mdash;above the title&mdash;and in the Featured Content area on the home page.', 'twentyfourteen' ), 'http://codex.wordpress.org/Post_Thumbnails#Setting_a_Post_Thumbnail' ) . '</li>' .
-				'<li>' . sprintf( __( 'For an in-depth tutorial, and more tips and tricks, visit the <a href="%s">Twenty Fourteen documentation</a>.', 'twentyfourteen' ), 'http://codex.wordpress.org/Twenty_Fourteen' ) . '</li>' .
-			'</ul>',
-	) );
-}
-add_action( 'admin_head-themes.php', 'twentyfourteen_contextual_help' );
-add_action( 'admin_head-edit.php',   'twentyfourteen_contextual_help' );
