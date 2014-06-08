@@ -1,36 +1,14 @@
-<?php
-/**
- * The Sidebar containing the main widget areas.
- *
- * @package deLighted
- */
-?>
-	<div id="secondary" class="widget-area" role="complementary">
 
-		<?php do_action( 'before_sidebar' ); ?>
+    <div class="sidebar col-sm-4">
+        
+        <?php
 
-		<?php if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>
+            get_sidebar('gallery');
 
-			<aside id="search" class="widget widget_search">
-				<?php get_search_form(); ?>
-			</aside>
+            get_sidebar('twitter');
 
-			<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'Archives', 'delighted' ); ?></h1>
-				<ul>
-					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
-				</ul>
-			</aside>
+            get_sidebar('archive');
 
-			<aside id="meta" class="widget">
-				<h1 class="widget-title"><?php _e( 'Meta', 'delighted' ); ?></h1>
-				<ul>
-					<?php wp_register(); ?>
-					<li><?php wp_loginout(); ?></li>
-					<?php wp_meta(); ?>
-				</ul>
-			</aside>
-
-		<?php endif; // end sidebar widget area ?>
-
-	</div><!-- #secondary -->
+        ?>
+        
+    </div>
