@@ -161,10 +161,10 @@ td span {
 
 .coupon {
     max-width:330px;
-    min-height:190px;
+    color:#333333;
     overflow:auto;
     padding:7px;
-	margin:2% auto 4% auto;
+	margin:1em auto;
     border:2px dotted #333333;
     border-radius: 4px;
 }

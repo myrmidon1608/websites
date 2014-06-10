@@ -1,5 +1,14 @@
 [
     {
+    	"id": "",
+    	"expire": "6/15/2014",
+    	"title": "<strong>Father's Day Special</strong>",
+    	"info": [
+    		"Come in for your dad's favorite equipment and get <strong>10% off</strong>",
+			"MUST BRING IN PRINTED COUPON"
+    	]
+    },
+    {
     	"id": "mike1",
     	"expire": "6/30/2014",
     	"title": "Save 5%",

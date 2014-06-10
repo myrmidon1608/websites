@@ -5,11 +5,11 @@ function init() {
     PopulateData.getStoreInfo();
     PopulateData.setPageCounter();
 
-    if($('#home')) {
+    if(exists($('#home'))) {
         PopulateData.getCouponData();
     }
     
-    if($('#used')) {
+    if(exists($('#used'))) {
         var i = $('#used-menu').offset().top;
         
         PopulateData.getUsedGearData();
@@ -29,4 +29,12 @@ function init() {
     $('#' + id + '-nav').addClass('active');
     $('.navbar-inverse .btn-title').text(id.toUpperCase());*/
     
+}
+
+function exists(e) {
+    if(e.length > 0) {
+        return true;
+    } else {
+        return false;
+    }
 }

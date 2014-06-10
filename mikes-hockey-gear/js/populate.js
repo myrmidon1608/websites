@@ -114,29 +114,28 @@ PopulateData = {
     },
     
     setCouponData: function() {
-        var coupons = PopulateData.pageData.coupons;
-        
-        $.each(coupons, function(key, value) {
-            var title = "<h4 class=\"title\">" + value.title + "</h4>",
-                info  = "";
+        var couponData       = PopulateData.pageData.coupons,
+            couponContainers = $('.coupon');
 
-            $.each(value.info, function(key, value) {
-                info += value + "<br />";
-            });
+        for(var i = 0; i < couponContainers.length; i++) {
+            if(couponData[i]) {
+                var title = "<h4 class=\"title\">" + couponData[i].title + "</h4>",
+                    info  = "";
 
-            info += "<br /><p>Expires " + value.expire + "<span class=\"right\">ID: " + value.id + "</span></p>";
-                
-            $("#coupons").append(
-                "<div class=\"col-sm-4\">" +
-                    "<div class=\"coupon\">" +
-                        "<div class=\"row\">" +
-                            "<div class=\"col-xs-5\"><img src=\"/img/logo.jpg\" alt=\"Mike's Hockey Gear\" /></div>" + 
-                            "<div class=\"col-xs-7\">" + title + "</div>" + 
-                        "</div>" + info +
-                    "</div>" + 
-                "</div>"
-            );
-        });
+                $.each(couponData[i].info, function(key, value) {
+                    info += value + "<br />";
+                });
+
+                info += "<br /><p>Expires " + couponData[i].expire;
+                if(couponData[i].id) info += "<span class=\"right\">ID: " + couponData[i].id + "</span></p>";
+
+                couponContainers[i].innerHTML =
+                    "<div class=\"row\">" +
+                        "<div class=\"col-xs-5\"><img src=\"/img/logo.jpg\" alt=\"Mike's Hockey Gear\" /></div>" + 
+                        "<div class=\"col-xs-7\">" + title + "</div>" + 
+                    "</div>" + info;
+            }
+        }
     },
     
     setPageCounter: function() {
