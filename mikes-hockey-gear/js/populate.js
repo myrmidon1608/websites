@@ -75,13 +75,20 @@ PopulateData = {
     },
     
     setHours: function(e) {
+        
         var id    = e.data('id'),
             info  = PopulateData.pageData.store[id],
             title = info.title + " Hours",
             hours = info.hours;
-        
+        console.log(id);
         $('#hoursModal .modal-header h3').html(title);
-        $('#hoursModal .modal-body table').html('');
+        $('#hoursModal .modal-body').html('');
+        
+        // Summer Hours
+        if(id == 'bcs') {
+            $('#hoursModal .modal-body').append("<p><strong><a href=\"/media/bci-summer-calendar.xls\">Summer Hours</a></strong></p>");
+        }
+        $('#hoursModal .modal-body').append('<table></table>');
         
         $.each(hours, function(key, value) {
             var day  = PopulateData.dayRef[key];
