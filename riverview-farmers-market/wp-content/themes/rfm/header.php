@@ -19,11 +19,12 @@
                     <div class="col-lg-3 col-md-4 col-sm-5 hidden-xs logo">
                         <a href="<?php echo home_url(); ?>">
                             <img src="<?php root(); ?>/core/img/peach.png" alt="" />
-                            <div>'<?php echo date('y'); ?></div>
+                            <!--<div>'<?php echo date('y'); ?></div>-->
                         </a>
                     </div>
                     <div class="col-lg-9 col-md-8 col-sm-7  col-xs-12">
                         <h1><?php bloginfo('name'); ?></h1>
+                        <h4>Now accepts SNAP/EBT/WIC/SFMNP</h4> 
                     </div>
                 </div>
             </div>
@@ -43,10 +44,11 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse col-sm-8" id="main-navbar">
                     <div class="nav navbar-nav row">
-                        <div class="active col-sm-3"><a href="#" title="2014 Vendors">Vendors</a></div>
-                        <div class="col-sm-3"><a href="#" title="Events Calendar">Events</a></div>
-                        <div class="col-sm-3"><a href="#" title="Ogden's End Community Garden">Garden</a></div>
-                        <div class="col-sm-3"><a href="#" title="Riverview Farmers Market FAQs">FAQ</a></div>
+                        <div class="active col-sm-2 col-sm-offset-2"><a href="vendors" title="2014 Vendors">Vendors</a></div>
+                        <div class="col-sm-2"><a href="events-calendar" title="Events Calendar">Events</a></div>
+                        <div class="col-sm-2"><a href="ogdens-end-community-garden" title="Ogden's End Community Garden">Garden</a></div>
+                        <div class="col-sm-2"><a href="contact" title="Contact <?php bloginfo('name'); ?>">Contact</a></div>
+                        <div class="col-sm-2"><a href="frequently-asked-questions" title="<?php bloginfo('name'); ?> FAQs">FAQ</a></div>
                     </div>
                 </div>
             </div>

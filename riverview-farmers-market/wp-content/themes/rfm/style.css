@@ -83,10 +83,15 @@ a:hover, a:active {
 
     .header h1 {
         width: 1%; /* To always assure the words will break to their own line */
-        font-size: 3.3em;
+        font-size: 3.1em;
         color: #736e1a;
         line-height: 1.1em;
         margin: -0.1em 0 0 0;
+    }
+    
+    .header h4 {
+        color: #d15e40;
+        margin: 0;
     }
 
     .header .logo img {
