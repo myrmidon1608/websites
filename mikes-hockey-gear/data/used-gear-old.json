@@ -1,0 +1,377 @@
+{
+    "skates": {
+        "title": "Hockey Skates",
+    	"dir": "img/used/hockey/skates/",
+    	"info": [
+    		{
+    			"img": "bauer-5000.png",
+    			"name": "Bauer 5000",
+    			"price": "20.00",
+    			"size": "Jr 3"
+    		},
+    		{
+    			"img": "ccm-tacks652.png",
+    			"name": "CCM 652 Tacks",
+    			"price": "",
+    			"size": "Sr 3"
+    		},
+    		{
+    			"img": "ccm-tacks952.png",
+    			"name": "CCM 952 Tacks",
+    			"price": "",
+    			"size": "Sr 3.5"
+    		},
+    		{
+    			"img": "bauer2000-skate.png",
+    			"name": "Bauer 2000",
+    			"price": "",
+    			"size": "Sr 4"
+    		},
+    		{
+    			"img": "ccm55-skate.png",
+    			"name": "CCM 55",
+    			"price": "",
+    			"size": "Sr 5"
+    		},
+    		{
+    			"img": "ccm-625.png",
+    			"name": "CCM 652 Tacks",
+    			"price": "25.00",
+    			"size": "Sr 6"
+    		},
+    		{
+    			"img": "eastonccm-skate.png",
+    			"name": "CCM 550",
+    			"price": "25.00",
+    			"size": "Sr 6"
+    		},
+    		{
+    			"img": "ccm-tacks.png",
+    			"name": "CCM Tacks",
+    			"price": "20.00",
+    			"size": "Sr 7.5"
+    		},
+    		{
+    			"img": "ccm-tacks1052.png",
+    			"name": "CCM 1052 Tacks",
+    			"price": "",
+    			"size": "Sr 8"
+    		},
+    		{
+    			"img": "ccm-vector.png",
+    			"name": "CCM Vector",
+    			"price": "40.00",
+    			"size": "Sr 8.5"
+    		},
+    		{
+    			"img": "reebok1k-skate.png",
+    			"name": "Reebok 1K",
+    			"price": "40.00",
+    			"size": "Sr 9"
+    		},
+    		{
+    			"img": "bauer-7000.png",
+    			"name": "Bauer 7000",
+    			"price": "25.00",
+    			"size": "Sr 9.5"
+    		},
+    		{
+    			"img": "vapor6-skate.png",
+    			"name": "Vapor 6",
+    			"price": "",
+    			"size": "Sr 10"
+    		},
+    		{
+    			"img": "bauer-silver.png",
+    			"name": "Bauer Silver",
+    			"price": "25.00",
+    			"size": "Sr 11"
+    		}
+    	]
+    },
+    
+    "gear": {
+        "title": "Protective",
+    	"dir": "img/used/hockey/gear/",
+    	"info": [
+    		{
+    			"img": "ccm-helm2.png",
+    			"name": "CCM Helmet w/ Cage",
+    			"price": "20.00",
+    			"size": "Sr Med"
+    		},
+    		{
+    			"img": "ccm-helm.png",
+    			"name": "CCM Helmet w/ Cage",
+    			"price": "25.00",
+    			"size": "Sr Lrg"
+    		},
+    		{
+    			"img": "bauer-helm.png",
+    			"name": "Assorted Bauer Helmets",
+    			"price": "15.00",
+    			"size": "Sr"
+    		},
+    		{
+    			"img": "eastoneq3-gloves.png",
+    			"name": "Easton EQ3 Glove",
+    			"price": "15.00",
+    			"size": "10\""
+    		},
+    		{
+    			"img": "mixed-gloves.png",
+    			"name": "Mixed Gloves",
+    			"price": "15.00",
+    			"size": "12\""
+ 
+    		},
+    		{
+    			"img": "reebok-shin.png",
+    			"name": "Assorted Damaged",
+    			"price": "10.00",
+    			"size": ""
+    		},
+    		{
+    			"img": "reebok2k-shin.png",
+    			"name": "Reebok 2K",
+    			"price": "20.00",
+    			"size": "12\""
+    		},
+    		{
+    			"img": "easton13-shin.png",
+    			"name": "Easton",
+    			"price": "15.00",
+    			"size": "13\""
+   
+    		},
+    		{
+    			"img": "wwmed-elbow.png",
+    			"name": "WinnWell",
+    			"price": "15.00",
+    			"size": "Yth Med"
+    		},
+    		{
+    			"img": "bauer-pant.png",
+    			"name": "Bauer Vapor X30",
+    			"price": "30.00",
+    			"size": "Yth Med"
+    		},
+    		{
+    			"img": "easton-ythpant.png",
+    			"name": "Easton ST4",
+    			"price": "20.00",
+    			"size": "Yth Med"
+    		},
+    		{
+    			"img": "synergy-pant.png",
+    			"name": "Easton EQ50",
+    			"price": "25.00",
+    			"size": "Yth XLrg"
+    		},
+    		{
+    			"img": "easton-pant.png",
+    			"name": "Easton Pants",
+    			"price": "30.00",
+    			"size": "Jr Lrg"
+    		},
+    		{
+    			"img": "tackla-pant.png",
+    			"name": "Tackla Pants",
+    			"price": "25.00",
+    			"size": "Sr Small"
+    		},
+    		{
+    			"img": "koho-shoulder.png",
+    			"name": "Koho",
+    			"price": "25.00",
+    			"size": "Jr Small"
+    	
+    		},
+    		{
+    			"img": "reebok2k-shoulder.png",
+    			"name": "Reebok 2K",
+    			"price": "25.00",
+    			"size": "Jr Lrg"
+    	
+    		},
+    		{
+    			"img": "sherwood-shoulder.png",
+    			"name": "Sherwood Classic",
+    			"price": "15.00",
+    			"size": "Sr Lrg"
+    		}
+    	]
+    },
+    
+    "goalie": {
+        "title": "Goalie",
+    	"dir": "img/used/goalie/",
+    	"info": [
+    		{
+    			"img": "skates/bauer-goalie.png",
+    			"name": "Bauer Pearl",
+    			"price": "20.00",
+    			"size": "Sr 7.5"
+    		},
+    		{
+    			"img": "skates/bauersupreme.png",
+    			"name": "Bauer Supreme",
+    			"price": "95.00",
+    			"size": "Sr 12"
+    		},
+    		{
+    			"img": "gear/goalie-mask.png",
+    			"name": "Helmet",
+    			"price": "",
+    			"size": ""
+    		},
+    		{
+    			"img": "gear/one75goalstk.png",
+    			"name": "Bauer One75 Stick",
+    			"price": "40.00",
+    			"size": "27 1/2\""
+    		},
+    		{
+    			"img": "gear/tps-goalie.png",
+    			"name": "TPS Goalie Chest",
+    			"price": "25.00",
+    			"size": "Jr Lrg"
+    		},
+    		{
+    			"img": "gear/ythfranklinchest.png",
+    			"name": "Franklin",
+    			"price": "20.00",
+    			"size": "Yth"
+    		},
+    		{
+    			"img": "gear/jrfranklinchest.png",
+    			"name": "Franklin",
+    			"price": "25.00",
+    			"size": "Jr"
+    		},
+    		{
+    			"img": "gear/reebokchest.png",
+    			"name": "Reebok 6K",
+    			"price": "80.00",
+    			"size": "Senior XLrg"
+    		},
+    		{
+    			"img": "gear/brians-blocker.png",
+    			"name": "Brians Air Hook",
+    			"price": "25.00",
+    			"size": "Yth-Jr"
+    		},
+    		{
+    			"img": "gear/vaughn-blocker.png",
+    			"name": "Vaughn B4040",
+    			"price": "30.00",
+    			"size": "Jr"
+    		},
+    		{
+    			"img": "gear/vaughn-velocity.png",
+    			"name": "Vaughn Velocity 7000",
+    			"price": "30.00",
+    			"size": "Sr"
+    		},
+    		{
+    			"img": "gear/heaton-blocker.png",
+    			"name": "Heaton 6700",
+    			"price": "",
+    			"size": "Sr"
+    		},
+    		{
+    			"img": "gear/brians-glove.png",
+    			"name": "Brians Air Hook",
+    			"price": "25.00",
+    			"size": "Yth"
+    		},
+    		{
+    			"img": "gear/vaughn-glove.png",
+    			"name": "Vaughn T4040",
+    			"price": "30.00",
+    			"size": "Jr"
+    		},
+    		{
+    			"img": "gear/heaton-glove.png",
+    			"name": "Heaton",
+    			"price": "40.00",
+    			"size": "Sr"
+    		},
+    		{
+    			"img": "gear/heaton-glove2.png",
+    			"name": "Heaton",
+    			"price": "",
+    			"size": "Sr"
+   
+    		},
+    		{
+    			"img": "gear/koho-goalpad.png",
+    			"name": "KOHO",
+    			"price": "",
+    			"size": ""
+    		},
+    		{
+    			"img": "gear/goalpants.png",
+    			"name": "Vaughn",
+    			"price": "15.00",
+    			"size": "Jr"
+    		}
+    	]
+    },
+    
+    "ref": {
+        "title": "Referee",
+    	"dir": "img/used/ref/",
+    	"info": [
+    		{
+    			"img": "shirt-lrg.png",
+    			"name": "Ref AK Shirt",
+    			"price": "10.00",
+    			"size": "Sr Lrg"
+    		},
+    		{
+    			"img": "shirt.png",
+    			"name": "Ref AK Shirt",
+    			"price": "20.00",
+    			"size": "Sr Lrg"
+    		},
+    		{
+    			"img": "shirt-xlrg.png",
+    			"name": "Ref AK Shirt",
+    			"price": "20.00",
+    			"size": "Sr XLrg"
+    		},
+    		{
+    			"img": "shirt-xxlrg.png",
+    			"name": "Ref AK Shirt",
+    			"price": "20.00",
+    			"size": "Sr XXLrg"
+    		},
+    		{
+    			"img": "pants-xlrg.png",
+    			"name": "CCM Ref Pant",
+    			"price": "20.00",
+    			"size": "XLrg"
+    		}
+    	]
+    },
+    
+    "figure": {
+        "title": "Figure",
+    	"dir": "img/used/figure/",
+    	"info": [
+    		{
+    			"img": "skates/soft-y10.png",
+    			"name": "Soft Series Pink",
+    			"price": "25.00",
+    			"size": "Yth 10"
+    		},
+    		{
+    			"img": "skates/riedell-y11.png",
+    			"name": "Riedell White",
+    			"price": "25.00",
+    			"size": "Yth 11"
+    		}
+    	]
+    }
+}

@@ -10,11 +10,11 @@ function init() {
     }
     
     if(exists($('#used'))) {
-        var i = $('#used-menu').offset().top;
+        //var i = $('#used-menu').offset().top;
         
         PopulateData.getUsedGearData();
     
-        $(document).scroll(function() {
+        /*$(document).scroll(function() {
             var windowWidth = 753; // iPad Media Query Width - Scroll Bar Width (15px)
             
             if($(document).scrollTop() > i && $(window).width() >= windowWidth) {
@@ -22,7 +22,7 @@ function init() {
             } else {
                 $('#used-menu').css('top', 0);
             }
-        });
+        });*/
     }
     
     /*var id = $('.content').attr('id');

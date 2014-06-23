@@ -227,6 +227,33 @@ td span {
     .itemPrice {
         float:right;
     }
+    
+#used-carousel > .carousel-inner > .item
+#used-carousel > .carousel-inner > .active
+#used-carousel > .carousel-inner > .left {
+    width: 100%;
+}
+
+#used-carousel > .carousel-inner > .item,
+#used-carousel > .carousel-inner > .active,
+#used-carousel .carousel-inner > .item > img,
+#used-carousel .carousel-inner > .item > a > img {
+    max-height: 500px;
+    float: none;
+    margin: 0 auto;
+}
+
+#used-carousel .carousel-caption {
+    top: 10%;
+    bottom: auto;
+}
+
+#used-carousel .carousel-control:link,
+#used-carousel .carousel-control:hover,
+#used-carousel .carousel-control:focus,
+#used-carousel .carousel-control:active {
+    color: #000000;
+}
 
 #about-mhg {
     text-align:justify;
@@ -261,6 +288,17 @@ td span {
 #sitemap li {
     list-style:disc;
 	margin:1em 0;
+}
+
+@media (max-width: 991px) {
+    
+    #used-carousel .carousel-control:link,
+    #used-carousel .carousel-control:hover,
+    #used-carousel .carousel-control:focus,
+    #used-carousel .carousel-control:active {
+        color: #ffffff;
+    }
+    
 }
 
 @media (max-width: 767px) {

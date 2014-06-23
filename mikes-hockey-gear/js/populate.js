@@ -18,7 +18,7 @@ PopulateData = {
     },
     
     getStoreInfo: function() {
-        $.getJSON("data/store-info.json", function(data) {
+        $.getJSON("/data/store-info.json", function(data) {
             PopulateData.pageData.store = data;
             
             PopulateData.setHeaderInfo('bcs');
@@ -42,7 +42,7 @@ PopulateData = {
     },
     
     getCouponData: function() {
-        $.getJSON("data/coupons.json", function(data) {
+        $.getJSON("/data/coupons.json", function(data) {
             PopulateData.pageData.coupons = data;
             
             PopulateData.setCouponData();
@@ -50,15 +50,15 @@ PopulateData = {
     },
     
     getUsedGearData: function() {
-        $.getJSON("data/used-gear.json", function(data) {
+        $.getJSON("/data/used-gear.json", function(data) {
             PopulateData.pageData.gear = data;
             
-            $.each(data, function(key, value) {
-                var id = key + "-list";
+            //$.each(data, function(key, value) {
+                var id = "used-carousel";
                 
-                PopulateData.setUsedGearMenu(id, value);
-                PopulateData.setUsedGearList(id, value);
-            });
+                //PopulateData.setUsedGearMenu(id, value);
+                PopulateData.setUsedGearList(id, data);
+            //});
         });
     },
     
@@ -75,7 +75,6 @@ PopulateData = {
     },
     
     setHours: function(e) {
-        
         var id    = e.data('id'),
             info  = PopulateData.pageData.store[id],
             title = info.title + " Hours",
@@ -192,31 +191,24 @@ PopulateData = {
     },
     
     setUsedGearList: function(id, content) {
-        var node  = "<div id=\"" + id + "\"></div>",
-            title = "<h3>" + content.title + "</h3>",
-            dir   = content.dir,
-            cols  = 3,
-            i     = 0,
-            list  = '';
-            
-        $('#used-list').append(node);
-        $('#' + id).append(title);
-            
-        $.each(content.info, function(key, value) {
-            var img   = "<img src=\"/" + dir + value.img +"\" alt=\"" + value.name + "\" />",
-                name  = "<p class=\"itemName\">" + value.name + "</p>",
-                size  = "<p><span class=\"itemSize\">" + value.size + "</span>",
-                price = (value.price && value.price.length > 0) ? "<span class=\"itemPrice\">$" + value.price + "</span></p>" : "";    
-            
-            if(i == 0) list += "<div class=\"row\">";
-            
-            list += "<div class=\"col-sm-3 col-xs-6 used-item\">" + img + name + size + price + "</div>";
-            
-            if(i == cols) list += "</div>";
-            
-            i = (i < cols) ? i + 1 : 0;
-        });
-        $('#' + id).append(list);
+        for(var i = 0; i < content.length; i++) {
+            var value = content[i],
+                img = "<img src=\"/img/used/carousel/" + value.img +".JPG\" alt=\"" + value.title + "\" />",
+                title = "<h1>" + value.title + "</h1>",
+                subtitle = "<p>" + value.subtitle + "</p>";
+                
+            var cls = (i == 0) ? "item active" : "item";
+                
+            $("#" + id + " .carousel-inner").append(
+                "<div class=\"" + cls + "\">" +
+                img +
+                "<div class=\"carousel-caption\">" +
+                title +
+                //subtitle +
+                "</div>" +
+                "</div>"
+            );
+        }
     },
     
     generateMapAddr: function(addr) {
