@@ -44,11 +44,11 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse col-sm-8" id="main-navbar">
                     <div class="nav navbar-nav row">
-                        <div class="active col-sm-2 col-sm-offset-2"><a href="vendors" title="2014 Vendors">Vendors</a></div>
-                        <div class="col-sm-2"><a href="events-calendar" title="Events Calendar">Events</a></div>
-                        <div class="col-sm-2"><a href="ogdens-end-community-garden" title="Ogden's End Community Garden">Garden</a></div>
-                        <div class="col-sm-2"><a href="contact" title="Contact <?php bloginfo('name'); ?>">Contact</a></div>
-                        <div class="col-sm-2"><a href="frequently-asked-questions" title="<?php bloginfo('name'); ?> FAQs">FAQ</a></div>
+                        <div class="col-sm-2 col-sm-offset-2<?php set_active(331) ?>"><a href="vendors" title="2014 Vendors">Vendors</a></div>
+                        <div class="col-sm-2<?php set_active(333) ?>"><a href="events-calendar" title="Events Calendar">Events</a></div>
+                        <div class="col-sm-2<?php set_active(335) ?>"><a href="ogdens-end-community-garden" title="Ogden's End Community Garden">Garden</a></div>
+                        <div class="col-sm-2<?php set_active(337) ?>"><a href="contact" title="Contact <?php bloginfo('name'); ?>">Contact</a></div>
+                        <div class="col-sm-2<?php set_active(339) ?>"><a href="frequently-asked-questions" title="<?php bloginfo('name'); ?> FAQs">FAQ</a></div>
                     </div>
                 </div>
             </div>

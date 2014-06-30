@@ -25,4 +25,9 @@ function root() {
     print PATH;
 }
 
+function set_active($id) {
+    $activeCls = (is_page($id)) ? " active" : "";
+    print $activeCls;
+}
+
 ?>

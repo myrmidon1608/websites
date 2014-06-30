@@ -1,25 +1,20 @@
 /*
-	Theme Name: deLighted
-	Theme URI: http://themeshift.com/theme/delighted/
-	Author: ThemeShift
-	Author URI: http://themeshift.com
+	Theme Name: Riverview Farmers Market
+	Author: Nicholas Moore
 	Description: deLighted is a simple, light-weight personal blog theme by ThemeShift.
-	Version: 1.0.3
+	Version: 1.0
 	License: GNU General Public License v2.0
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Text Domain: delighted
+	Text Domain: rfm
 	Domain Path: /languages/
 	Tags: gray, white, light, two-columns, right-sidebar, fixed-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, full-width-template, sticky-post, threaded-comments, translation-ready
-	
-	deLighted WordPress Theme, Copyright 2013 ThemeShift (Simon Rimkus)
-	deLighted is distributed under the terms of the GNU GPL.
-	
-	delighted is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
-	
-	Resetting and rebuilding styles have been helped along thanks to the fine work of
-	Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-	along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-	and Blueprint http://www.blueprintcss.org/
+
+    Pages:
+    - VENDORS: 331
+    - EVENTS CALENDAR: 333
+    - OGDEN'S END COMMUNITY GARDEN: 335
+    - CONTACT: 337
+    - FREQUENTLY ASKED QUESTIONS: 339
 */
 
 body, html {
@@ -216,6 +211,10 @@ a:hover, a:active {
     padding: 15px;
 }
 
+.main-content {
+    padding-bottom: 15px;
+}
+
 .main-content img {
     max-width: 100%;
 }
@@ -234,6 +233,10 @@ a:hover, a:active {
     color: #d15e40;
 }
 
+.main-content .the-content h4 {
+    margin-top: 20px;
+}
+
 .sidebar-item {
     margin-left: 1em;
     border-top: 1px solid #736e1a;
@@ -248,7 +251,6 @@ a:hover, a:active {
     }
 
     .sidebar-inner {
-        height: 100px;
         padding-left: 1em;
         margin-top: 1em;
         margin-left: -1em;
