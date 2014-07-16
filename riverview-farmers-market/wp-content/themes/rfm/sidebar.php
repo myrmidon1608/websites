@@ -3,7 +3,7 @@
         
         <?php
 
-            get_sidebar('gallery');
+            //get_sidebar('gallery');
 
             get_sidebar('twitter');
 

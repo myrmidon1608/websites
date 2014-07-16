@@ -114,11 +114,14 @@ a:hover, a:active {
 }
     
 .navbar {
+    min-height: 1px;
     margin-bottom: 0;
 }
 
 .navbar-collapse {
+    width: 100%;
     box-shadow: none;
+    padding-right: 0;
 }
 
 .nav {
@@ -136,7 +139,7 @@ a:hover, a:active {
         text-transform: uppercase;
         color: #fcf9f8;
         display: block;
-        padding: 15px 0;
+        padding: 15px 0 10px 0;
     }
 
     .nav > div > a:hover, .nav > div > a:focus, .nav > div > a:active {
@@ -154,12 +157,21 @@ a:hover, a:active {
 }
 
 .navbar-brand {
+    height: auto;
     font-family: 'lobster_1.3regular';
     font-size: 1.5em;
     color: #fcf9f8;
     line-height: 1em;
+    padding: 0;
     margin: 0;
 }
+
+    .navbar-brand a {
+        color: #fcf9f8;
+        text-decoration: none;
+        display: block;
+        padding: 11px 15px 12px 15px;
+    }
 
 .carousel > .carousel-inner > .item,
 .carousel > .carousel-inner > .item > img,
@@ -237,6 +249,15 @@ a:hover, a:active {
     margin-top: 20px;
 }
 
+.form-control {
+    padding-left: 10px;
+}
+
+.mce_inline_error {
+    color: #a94442;
+    padding: 0.5em 0;
+}
+
 .sidebar-item {
     margin-left: 1em;
     border-top: 1px solid #736e1a;
@@ -296,6 +317,14 @@ a:hover, a:active {
     
     .carousel-caption h1 {
         font-size: 4.5em;
+    }
+    
+    .sidebar {
+        margin-top: 1em;
+    }
+    
+    .sidebar-item {
+        margin-left: 0;
     }
     
     .sidebar-inner {

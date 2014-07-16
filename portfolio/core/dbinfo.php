@@ -16,7 +16,7 @@
         
         if(logged_in()) {
             $session_user_id = $_SESSION['user_id'];
-            $user_data = user_data($session_user_id, 'username', 'first_name', 'last_name');
+            //$user_data = user_data($session_user_id, 'username', 'first_name', 'last_name');
         }
         
     } catch (PDOException $e) {

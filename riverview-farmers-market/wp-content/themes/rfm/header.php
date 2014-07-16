@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="description" content="">
         
-        <link rel="stylesheet" href="<?php root(); ?>/core/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php root(); ?>/core/css/fonts.css" />
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -38,17 +38,23 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <p class="navbar-brand">Food with a View<span class="visible-xs">&nbsp;&nbsp;'<?php echo date('y'); ?></span></p>
+                    <p class="navbar-brand">
+                        <a href="<?php echo home_url(); ?>">
+                            Food with a View<span class="visible-xs">&nbsp;&nbsp;'<?php echo date('y'); ?></span>
+                        </a>
+                    </p>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse col-sm-8" id="main-navbar">
-                    <div class="nav navbar-nav row">
-                        <div class="col-sm-2 col-sm-offset-2<?php set_active(331) ?>"><a href="vendors" title="2014 Vendors">Vendors</a></div>
-                        <div class="col-sm-2<?php set_active(333) ?>"><a href="events-calendar" title="Events Calendar">Events</a></div>
-                        <div class="col-sm-2<?php set_active(335) ?>"><a href="ogdens-end-community-garden" title="Ogden's End Community Garden">Garden</a></div>
-                        <div class="col-sm-2<?php set_active(337) ?>"><a href="contact" title="Contact <?php bloginfo('name'); ?>">Contact</a></div>
-                        <div class="col-sm-2<?php set_active(339) ?>"><a href="frequently-asked-questions" title="<?php bloginfo('name'); ?> FAQs">FAQ</a></div>
+                <div class="col-sm-8">
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        <div class="nav navbar-nav row">
+                            <div class="col-sm-2 col-sm-offset-2<?php set_active(331) ?>"><a href="vendors" title="2014 Vendors">Vendors</a></div>
+                            <div class="col-sm-2<?php set_active(333) ?>"><a href="events-calendar" title="Events Calendar">Events</a></div>
+                            <div class="col-sm-2<?php set_active(335) ?>"><a href="ogdens-end-community-garden" title="Ogden's End Community Garden">Garden</a></div>
+                            <div class="col-sm-2<?php set_active(337) ?>"><a href="contact" title="Contact <?php bloginfo('name'); ?>">Contact</a></div>
+                            <div class="col-sm-2<?php set_active(339) ?>"><a href="frequently-asked-questions" title="<?php bloginfo('name'); ?> FAQs">FAQ</a></div>
+                        </div>
                     </div>
                 </div>
             </div>

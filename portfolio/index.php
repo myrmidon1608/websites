@@ -10,7 +10,7 @@
     if(!isset($_GET['login']))
         echo "<div id=\"loading\"><div></div></div>";
     // Logged In User Bar
-    if(logged_in()) include('includes/userbar.php');
+    //if(logged_in()) include('includes/userbar.php');
     
     $portfolioSection = isset($_GET['section']) ? $_GET['section'] : "home";
     $blogPost = isset($_GET['post']) ? $_GET['post'] : 0;
