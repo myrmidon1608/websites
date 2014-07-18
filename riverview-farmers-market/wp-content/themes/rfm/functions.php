@@ -26,7 +26,7 @@ function root() {
 }
 
 function set_active($id) {
-    $activeCls = (is_page($id)) ? " active" : "";
+    $activeCls = (($id == "home" && is_home()) || is_page($id)) ? " active" : "";
     print $activeCls;
 }
 

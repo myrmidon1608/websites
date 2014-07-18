@@ -73,7 +73,7 @@ a:hover, a:active {
     background-repeat: no-repeat;
     background-size: 90px;
     background-position: 98% 83%;
-    padding: 15px;
+    padding: 15px 15px 0 15px;
 }
 
     .header h1 {
@@ -85,7 +85,9 @@ a:hover, a:active {
     }
     
     .header h4 {
+        font-size: 24px;
         color: #d15e40;
+        padding-bottom: 3px;
         margin: 0;
     }
 
@@ -128,12 +130,14 @@ a:hover, a:active {
     width: 100%;
 }
 
-    .nav div {
+    .nav li {
+        width: 14.27%;
+        display: inline-block;
         padding-right: 0;
         padding-left: 0;
     }
 
-    .nav > div > a:link, .nav > div > a:visited {
+    .nav > li > a:link, .nav > li > a:visited {
         width: 100%;
         text-align: center;
         text-transform: uppercase;
@@ -142,7 +146,7 @@ a:hover, a:active {
         padding: 15px 0 10px 0;
     }
 
-    .nav > div > a:hover, .nav > div > a:focus, .nav > div > a:active {
+    .nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
         background-color: #736e1a;
         text-decoration: none;
     }
@@ -161,7 +165,7 @@ a:hover, a:active {
     font-family: 'lobster_1.3regular';
     font-size: 1.5em;
     color: #fcf9f8;
-    line-height: 1em;
+    line-height: 0.9em;
     padding: 0;
     margin: 0;
 }
@@ -171,6 +175,37 @@ a:hover, a:active {
         text-decoration: none;
         display: block;
         padding: 11px 15px 12px 15px;
+    }
+    
+.homepage-banner {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+    .homepage-banner div {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    
+    .homepage-banner div:first-child {
+        border-right: 2px solid #8C2810;
+    }
+
+    .homepage-banner a:link, .homepage-banner a:visited {
+        background-color: #a32f13;
+        font-family: 'bebasregular';
+        font-size: 1.2em;
+        color: #fcf9f8;
+        line-height: 1em;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        padding: 0.9em 0 0.7em 0;
+    }
+    
+    .homepage-banner a:hover, .homepage-banner a:active {
+        background-color: #8C2810;
+        text-decoration: none;
     }
 
 .carousel > .carousel-inner > .item,
@@ -307,12 +342,22 @@ a:hover, a:active {
         margin-left: -0.8em;
     }
     
-    .navbar-nav {
+    .navbar-toggle {
+        padding: 12px 15px 8px 0;
         margin: 0;
+    }
+    
+    .navbnar-collapse {
+        margin-left: 0;
     }
 
     .navbar-brand span {
         display: inline-block !important;
+    }
+    
+    .homepage-banner div:first-child {
+        border-right: none;
+        border-bottom: 2px solid #8C2810;
     }
     
     .carousel-caption h1 {
@@ -334,6 +379,10 @@ a:hover, a:active {
 }
 
 @media (max-width: 420px) {
+
+    .header {
+        background-position: 98% 68%;
+    }
     
     .navbar-brand {
         font-size: 1.2em;
@@ -346,10 +395,7 @@ a:hover, a:active {
 }
 
 @media (max-width: 380px) {
-
-    .header {
-        background-size: 70px;
-        background-position: 98% 98%;
-    }
+    
+    
     
 }

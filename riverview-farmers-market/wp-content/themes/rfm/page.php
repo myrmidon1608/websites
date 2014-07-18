@@ -1,6 +1,8 @@
 
     <?php get_header(); ?>
 
+        <div class="main-content col-sm-12">
+
         <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
             <div class="the-page" id="page-<?php the_ID(); ?>">

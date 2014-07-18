@@ -1,7 +1,16 @@
     
-    <div id="homepage-carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <div class="homepage-banner row">
+        <div class="col-sm-6">
+            <a href="vendors" title="2014 Vendors">Sign up to be a vendor</a>
+        </div>
+        <div class="col-sm-6">
+            <a href="contact" title="Contact <?php bloginfo('name'); ?>">Sign up for our newsletter</a>
+        </div>
+    </div>
+
+    <div id="homepage-carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
         <p class="hours align-right">
-            May-October<br />
+            May-November<br />
             Sundays&nbsp;&nbsp;9am–2pm
         </p>
         <!-- Wrapper for slides -->
