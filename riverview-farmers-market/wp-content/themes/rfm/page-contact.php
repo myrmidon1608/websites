@@ -57,29 +57,8 @@
                     <br />
                         
                     <h2>Send us an email</h2>
-                    <form action="mailto:" role="form">
-                        <div class="form-group">
-                            <label for="contact-EMAIL">Email address</label>
-                            <input type="email" value="" name="EMAIL" class="form-control" id="contact-EMAIL">
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6 form-group">
-                                <label for="contact-FNAME">First name</label>
-                                <input type="text" value="" name="FNAME" class="form-control" id="contact-FNAME">
-                            </div>
-                            <div class="col-sm-6 form-group">
-                                <label for="contact-LNAME">Last name</label>
-                                <input type="text" value="" name="LNAME" class="form-control" id="contact-LNAME">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-BODY">What's on your mind?</label>
-                            <textarea class="form-control" id="contact-BODY" rows="5"></textarea>
-                        </div>
-                        <p><small>*All fields required</small></p>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                        
-                    </form>
+                    
+                    <?php include("email-form.php"); ?>
                     
                 </div>
             </div>

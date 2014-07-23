@@ -66,6 +66,22 @@ a:hover, a:active {
     display: none;
 }
 
+.img-holder {
+    text-align: center;
+    padding: 1em 0;
+}
+
+    .img-holder img {
+        width: 70%;
+    }
+    
+.alert {
+    font-weight: bold;
+    color: #333;
+    background-color: #DBD563;
+    border-color: #3e400f;
+}
+
 .header {
     font-family: 'bebasregular';
     background-color: #fcf9f8;
@@ -280,15 +296,20 @@ a:hover, a:active {
     color: #d15e40;
 }
 
+.main-content .the-content h3 {
+    margin: 1em 0 0.5em 0;
+}
+
 .main-content .the-content h4 {
-    margin-top: 20px;
+    color: #3e400f;
+    margin-top: 1.5em;
 }
 
 .form-control {
     padding-left: 10px;
 }
 
-.mce_inline_error {
+.mce_inline_error, .form-error {
     color: #a94442;
     padding: 0.5em 0;
 }
@@ -337,6 +358,14 @@ a:hover, a:active {
 }
 
 @media (max-width: 767px) {
+    
+    .img-holder {
+        padding: 0.3em 0;
+    }
+    
+        .img-holder img {
+            width: 100%;
+        }
     
     .header .logo div {
         margin-left: -0.8em;

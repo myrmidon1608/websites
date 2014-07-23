@@ -30,4 +30,35 @@ function set_active($id) {
     print $activeCls;
 }
 
+function check_form($ele) {
+    $val = false;
+    
+    if(!isset($_POST[$ele]) || empty($_POST[$ele])) {
+        $val = "This field is required.";
+    } else {
+    // Additional validation
+        if ($ele == "EMAIL" && !filter_var($_POST[$ele], FILTER_VALIDATE_EMAIL)) {
+            $val = "Invalid email address.";
+        }
+    }
+    return $val;
+}
+
+function send_email($type) {
+    $to = "myrmidon16@gmail.com";//farmsintheheights@gmail.com";
+    $subject = $_POST["FNAME"] . " " . $_POST["LNAME"] . " has contacted the Farmers Market";
+    $message = $_POST["BODY"];
+    $from = "From: " . $_POST["FNAME"] . " " . $_POST["LNAME"] . " <" . $_POST["EMAIL"] . ">";
+    
+    switch($type) {
+        case "contact":
+            $subject .= " for more information";
+            break;
+        case "contribute":
+            $subject .= " to contribute";
+            break;
+    }
+    mail($to, $subject, $message, $from);
+}
+
 ?>
