@@ -66,7 +66,7 @@ PopulateData = {
         var info  = PopulateData.pageData.store[id],
             title = "<strong><a href=\"" + info.url + "\" target=\"_blank\">" + info.title + "</a></strong>",
             addr  = info.address,
-            hours = "<span data-toggle=\"modal\" data-id=\"" + id + "\" onclick=\"PopulateData.setHours($(this));\">Hours</span>",
+            hours = (id == "ws") ? "<span class=\"text-warning\">For Hours, call BCI</span>" : "<span data-toggle=\"modal\" data-id=\"" + id + "\" onclick=\"PopulateData.setHours($(this));\">Hours</span>",
             phone = "<h3>" + info.phone + "</h3>";
         
         $('#' + id).append(
@@ -79,14 +79,14 @@ PopulateData = {
             info  = PopulateData.pageData.store[id],
             title = info.title + " Hours",
             hours = info.hours;
-        console.log(id);
+
         $('#hoursModal .modal-header h3').html(title);
         $('#hoursModal .modal-body').html('');
         
         // Summer Hours
-        if(id == 'bcs') {
+        /*if(id == 'bcs') {
             $('#hoursModal .modal-body').append("<p><strong><a href=\"/media/bci-summer-calendar.xls\">Summer Hours</a></strong></p>");
-        }
+        }*/
         $('#hoursModal .modal-body').append('<table></table>');
         
         $.each(hours, function(key, value) {
@@ -110,7 +110,7 @@ PopulateData = {
         var info  = PopulateData.pageData.store[id],
             title = "<h3><a href=\"" + info.url + "\" target=\"_blank\">" + info.title + "</a></h3>",
             phone = "<h3><a href=\"tel:" + info.phone + "\">" + info.phone + "</a></h3>",
-            hours = "<span data-toggle=\"modal\" data-id=\"" + id + "\" onclick=\"PopulateData.setHours($(this));\">Hours</span>",
+            hours = (id == "ws") ? "<span class=\"text-warning\">For Hours, call BCI</span>" : "<span data-toggle=\"modal\" data-id=\"" + id + "\" onclick=\"PopulateData.setHours($(this));\">Hours</span>",
             addr  = "<a href=\"http://maps.google.com/maps?daddr=" + PopulateData.generateMapAddr(info.address) + "\" target=\"_blank\">Get Directions</a>";
             
         
@@ -170,7 +170,7 @@ PopulateData = {
             phone = "<h4>" + info.phone + "</h4>",
             fax   = (info.fax) ? "<p><strong>" + info.fax + " (Fax)</strong></p>" : "",
             addr  = "<p>" + info.address + "</p>",
-            hours = "<p><span data-toggle=\"modal\" data-id=\"" + id + "\" onclick=\"PopulateData.setHours($(this));\">Hours</span></p>";
+            hours = (id == "ws") ? "<p><span class=\"text-warning\">For Hours, call BCI</span></p>" : "<p><span data-toggle=\"modal\" data-id=\"" + id + "\" onclick=\"PopulateData.setHours($(this));\">Hours</span></p>";
         
         $('#store-contact').append(
             "<div class=\"col-sm-4\">" + title + phone + fax + addr + hours + "</div>"

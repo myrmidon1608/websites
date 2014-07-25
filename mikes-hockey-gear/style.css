@@ -87,9 +87,18 @@ td span {
             margin:10px 0;
         }
         
-        .address span, #phone-info span, #store-contact span {
+        .address span[data-toggle="modal"],
+        #phone-info span[data-toggle="modal"],
+        #store-contact span[data-toggle="modal"] {
             color:#428bca;
             cursor:pointer;
+        }
+        
+        .address span[data-toggle="modal"]:hover,
+        #phone-info span[data-toggle="modal"]:hover,
+        #store-contact span[data-toggle="modal"]:hover {
+            color: #2a6496;
+            text-decoration: underline;
         }
         
     .navbar {

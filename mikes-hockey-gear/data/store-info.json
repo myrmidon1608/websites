@@ -1,6 +1,6 @@
 {
 	"alert": [
-		"<h3><a href=\"/media/bci-summer-calendar.xls\">BCS SUMMER HOURS</a></h3><p><strong>See attached for July hours</strong></p><br /><h3>We Buy &amp; Sell <a href=\"/used/\">USED GEAR (BCS only)</a></h3><br /><p><strong>DENNY REINL IS BACK AT MHG WINTERSPORT</strong></p><p>Look for him during Men's League games</p>"
+		"<h3>We Buy &amp; Sell <a href=\"/used/\">USED GEAR (BCI only)</a></h3><br /><p><strong>DENNY REINL IS BACK AT MHG WINTERSPORT</strong></p><p>Look for him during Men's League games</p>"
 	],
     
     "about": [
@@ -33,12 +33,12 @@
         "sales": "",
         "hours": {
         	"mon": "<span class=\"text-danger\">CLOSED</span>",
-        	"tues": "<span class=\"text-danger\">CLOSED</span>",
-        	"wed": "<span class=\"text-danger\">CLOSED</span>",
-        	"thurs": "<span class=\"text-danger\">CLOSED</span>",
+        	"tues": "<span class=\"text-danger\">OPEN</span>",
+        	"wed": "<span class=\"text-danger\">OPEN</span>",
+        	"thurs": "<span class=\"text-danger\">OPEN</span>",
         	"fri": "<span class=\"text-danger\">CLOSED</span>",
-        	"sat": "12:00PM-7:00PM",
-        	"sun": "12:00PM-7:00PM"
+        	"sat": "<span class=\"text-danger\">CLOSED</span>",
+        	"sun": "2:00PM-7:00PM"
         }
     }
 }
