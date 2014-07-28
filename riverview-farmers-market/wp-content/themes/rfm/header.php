@@ -15,15 +15,22 @@
     <body>
         <div class="container">
             <div class="header">
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-5 hidden-xs logo">
+                <div class="row logo">
+                    <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 hidden-xs logo">
                         <a href="<?php echo home_url(); ?>">
                             <img src="<?php root(); ?>/core/img/peach.png" alt="" />
                         </a>
+                    </div>
+                    <div class="col-lg-9 col-md-8 col-sm-5 title">
+                        <h1><?php bloginfo('name'); ?></h1>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 hidden-xs logo">
                         <h4 class="hidden-xs">Food with a View</h4>
                     </div>
-                    <div class="col-lg-9 col-md-8 col-sm-7  col-xs-12">
-                        <h1><?php bloginfo('name'); ?></h1>
+                    <div class="col-lg-9 col-md-8 col-sm-5 title">
                         <h4>accepts SNAP/EBT/WIC/SFMNP</h4>
                     </div>
                 </div>
