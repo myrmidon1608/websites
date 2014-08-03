@@ -250,6 +250,12 @@ a:hover, a:active {
     max-height: 400px;
 }
 
+.carousel > .carousel-inner > .item > img,
+.carousel > .carousel-inner > .active > img {
+    position: relative;
+    top: -200px;
+}
+
 .carousel-caption, .carousel .hours {
     font-family: 'bebasregular';
     color: #fcf9f8;

@@ -81,7 +81,18 @@
                     </div>
             </div>
 
-            <?php if( is_home() ) : include("home-carousel.php"); endif; ?>
+            <?php if( is_home() ) : ?>
+            
+            <div class="homepage-banner row">
+                <div class="col-sm-6">
+                    <a href="vendors" title="2014 Vendors">Sign up to be a vendor</a>
+                </div>
+                <div class="col-sm-6">
+                    <a href="contact" title="Contact <?php bloginfo('name'); ?>">Sign up for our newsletter</a>
+                </div>
+            </div>
+            
+            <?php include("archive-carousel-item.php"); endif; ?>
 
             <div class="content">
                 <div class="row">

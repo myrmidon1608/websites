@@ -1,21 +1,32 @@
-    
-    <div class="homepage-banner row">
-        <div class="col-sm-6">
-            <a href="vendors" title="2014 Vendors">Sign up to be a vendor</a>
-        </div>
-        <div class="col-sm-6">
-            <a href="contact" title="Contact <?php bloginfo('name'); ?>">Sign up for our newsletter</a>
-        </div>
-    </div>
-
     <div id="homepage-carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
         <p class="hours align-right">
             May-November<br />
             Sundays&nbsp;&nbsp;9am–2pm
         </p>
-        <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item active">
+
+        <?php 
+        
+            $carousel = get_posts(array("post_type" => "carousel-item"));
+            $i = 0;
+            
+            foreach($carousel as $post): setup_postdata($post);
+
+            $custom = get_post_custom($post->ID);
+
+            $title = $custom["title"][0];
+            $details = $custom["details"][0];
+            $image = $custom["image"][0]; ?>
+            
+            <div class="item<?php if($i == 0) { ?> active<?php } ?>" id="carousel-item-<?php the_ID(); ?>">
+              <img src="<?php root(); ?>/core/img/carousel/<?php echo $image; ?>" alt="">
+                <div class="carousel-caption">
+                    <h1><?php echo $title; ?></h1>
+                    <p><?php echo $details; ?></p>
+                </div>
+            </div>
+            
+            <!--<div class="item active">
               <img src="//placehold.it/1024x700" alt="">
                 <div class="carousel-caption">
                     <h1>Community</h1>
@@ -35,7 +46,12 @@
                     <h1>Arts</h1>
                     <p>Take note of the 'active' and 'slide' classes.</p>
                 </div>
-            </div>
+            </div>-->
+
+        <?php 
+            $i++;
+            endforeach;  ?>
+
         </div>
 
         <!-- Controls

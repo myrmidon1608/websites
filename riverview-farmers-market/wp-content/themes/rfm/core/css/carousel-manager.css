@@ -1,0 +1,13 @@
+
+.carousel-editor div {
+    margin: 1%;
+}
+
+.carousel-editor div label {
+    width: 10%;
+    float: left;
+}
+
+.carousel-editor div input[type="text"] {
+    width: 89%;
+}
