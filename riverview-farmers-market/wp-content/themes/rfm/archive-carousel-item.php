@@ -7,7 +7,7 @@
 
         <?php 
         
-            $carousel = get_posts(array("post_type" => "carousel-item"));
+            $carousel = get_posts(array("post_type" => "carousel-item", "numberposts" => -1));
             $i = 0;
             
             foreach($carousel as $post): setup_postdata($post);
@@ -16,14 +16,17 @@
 
             $title = $custom["title"][0];
             $details = $custom["details"][0];
+            $link = $custom["link"][0];
             $image = $custom["image"][0]; ?>
             
             <div class="item<?php if($i == 0) { ?> active<?php } ?>" id="carousel-item-<?php the_ID(); ?>">
-              <img src="<?php root(); ?>/core/img/carousel/<?php echo $image; ?>" alt="">
-                <div class="carousel-caption">
-                    <h1><?php echo $title; ?></h1>
-                    <p><?php echo $details; ?></p>
-                </div>
+                <img src="<?php root(); ?>/core/img/carousel/<?php echo $image; ?>" alt="<?php echo $details; ?>">
+                <a href="<?php echo $link; ?>">
+                    <div class="carousel-caption">
+                        <h1><?php echo $title; ?></h1>
+                        <p><?php echo $details; ?></p>
+                    </div>
+                </a>
             </div>
             
             <!--<div class="item active">

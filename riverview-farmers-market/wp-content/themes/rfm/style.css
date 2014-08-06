@@ -66,6 +66,10 @@ a:hover, a:active {
     display: none;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 .img-holder {
     text-align: center;
     padding: 1em 0;
@@ -250,6 +254,12 @@ a:hover, a:active {
     max-height: 400px;
 }
 
+    .carousel > .carousel-inner > .item a,
+    .carousel > .carousel-inner > .active a {
+        width: 100%;
+        display: block;
+    }
+
 .carousel > .carousel-inner > .item > img,
 .carousel > .carousel-inner > .active > img {
     position: relative;
@@ -272,10 +282,11 @@ a:hover, a:active {
     }
 
 .carousel-caption {
-    top: 15%;
+    height: 100%;
+    top: 0;
     right: 0;
-    bottom: 15%;
     left: 0;
+    padding-top: 10%;
 }
 
     .carousel-caption h1 {
@@ -369,7 +380,10 @@ a:hover, a:active {
 
 @media (max-width: 989px) {
     
-    
+    .carousel > .carousel-inner > .item > img,
+    .carousel > .carousel-inner > .active > img {
+        top: -100px;
+    }
     
 }
 
@@ -410,6 +424,11 @@ a:hover, a:active {
     .homepage-banner div:first-child {
         border-right: none;
         border-bottom: 2px solid #8C2810;
+    }
+    
+    .carousel > .carousel-inner > .item > img,
+    .carousel > .carousel-inner > .active > img {
+        top: 0;
     }
     
     .carousel-caption h1 {

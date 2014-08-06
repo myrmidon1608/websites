@@ -8,6 +8,8 @@
             get_sidebar('twitter');
 
             get_sidebar('archive');
+            
+            get_sidebar('links');
 
         ?>
         

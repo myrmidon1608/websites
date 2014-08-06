@@ -52,6 +52,7 @@
         $custom = get_post_custom($post -> ID);
         $title = $custom["title"][0];
         $details = $custom["details"][0];
+        $link = $custom["link"][0];
         $image = $custom["image"][0];
     ?>
 
@@ -67,6 +68,10 @@
         <div>
             <label>Details:</label>
             <input type="text" name="details" value="<?php echo $details; ?>" />
+        </div>
+        <div>
+            <label>Link:</label>
+            <input type="text" name="link" value="<?php echo $link; ?>" />
         </div>
         <div>
             <label>Image:</label>
@@ -99,7 +104,10 @@
         } else {
             update_post_meta($post -> ID, "title", $_POST["title"]);
             update_post_meta($post -> ID, "details", $_POST["details"]);
-            update_post_meta($post -> ID, "image", $_POST["image"]);
+            update_post_meta($post -> ID, "link", $_POST["link"]);
+            if(!empty($_POST["image"])) {
+                update_post_meta($post -> ID, "image", $_POST["image"]);
+            }
         }
     }
     
