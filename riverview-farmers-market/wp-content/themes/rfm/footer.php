@@ -5,7 +5,8 @@
         
         <div class="container">
             <div class="footer align-center">
-                &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
+                <span>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></span>
+                <a href="" title="Designed by Nicholas Moore"><img src="<?php root(); ?>/core/img/nm-sig.png" alt="Designed by Nicholas Moore" /></a>
             </div>
         </div>
     

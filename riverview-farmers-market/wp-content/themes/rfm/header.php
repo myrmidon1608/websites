@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="description" content="">
         
+        <link rel="shortcut icon" href="<?php root(); ?>/core/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="<?php root(); ?>/core/img/favicon.ico" type="image/x-icon">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php root(); ?>/core/css/fonts.css" />
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />

@@ -1,13 +1,11 @@
 /*
 	Theme Name: Riverview Farmers Market
-	Author: Nicholas Moore
-	Description: deLighted is a simple, light-weight personal blog theme by ThemeShift.
+	Author: Nicholas Moore (Myrmidon16))
+	Description: Food with a View
 	Version: 1.0
-	License: GNU General Public License v2.0
-	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Text Domain: rfm
+	Text Domain: rfm-2014
 	Domain Path: /languages/
-	Tags: gray, white, light, two-columns, right-sidebar, fixed-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, full-width-template, sticky-post, threaded-comments, translation-ready
+	Tags: farmers, market, riverview, jersey city, new jersey, food, cummunity, jersey, fresh, events, park
 
     Pages:
     - VENDORS: 331
@@ -266,6 +264,10 @@ a:hover, a:active {
     top: -200px;
 }
 
+.carousel > .carousel-inner > #carousel-item-370 > img {
+    top: -100px;
+}
+
 .carousel-caption, .carousel .hours {
     font-family: 'bebasregular';
     color: #fcf9f8;
@@ -367,10 +369,16 @@ a:hover, a:active {
     }
 
 .footer {
+    height: 40px;
     font-family: 'lobster_1.3regular';
     color: #fcf9f8;
-    padding: 15px;
+    padding: 8px 15px;
 }
+
+    .footer img {
+        height: 100%;
+        margin-left: 2em;
+    }
 
 @media (max-width: 1199px) {
     

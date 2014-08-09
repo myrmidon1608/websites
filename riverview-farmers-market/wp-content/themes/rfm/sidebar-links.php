@@ -1,7 +1,7 @@
 
     <div class="sidebar-links sidebar-item">
         <div class="sidebar-inner">
-            <h4>Local Organizations</h4>
+            <h4>Support These Jersey City Organizations</h4>
             <p><a href="http://jcfridays.com/" target="_blank">Jersey City Fridays</a></p>
             <p><a href="http://www.jerseyfresh.nj.gov/" target="_blank">Jersey Fresh</a></p>
             <p><a href="http://www.riverviewjazz.org/" target="_blank">Riverview Jazz</a></p>

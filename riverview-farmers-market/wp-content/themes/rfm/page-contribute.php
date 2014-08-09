@@ -2,6 +2,12 @@
     <?php get_header(); ?>
 
         <div class="main-content col-sm-12">
+            
+        <!-- <h3>Donate to the Market</h3>
+
+        <button type="button" class="btn btn-primary">PayPal</button>
+
+        <p>Make a tax-deductible donation to Farms in the Heights, the 501(c)(3) non-profit that operates the Riverview Farmers Market.</p> -->
 
         <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
