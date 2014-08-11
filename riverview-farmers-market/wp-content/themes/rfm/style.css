@@ -372,7 +372,7 @@ a:hover, a:active {
     height: 40px;
     font-family: 'lobster_1.3regular';
     color: #fcf9f8;
-    padding: 8px 15px;
+    padding: 8px 0;
 }
 
     .footer img {
@@ -454,6 +454,12 @@ a:hover, a:active {
     .sidebar-inner {
         border-left: none;
     }
+
+    .main-content .the-post img,
+    .main-content .the-post-single img {
+        width: 80% !important;
+        height: auto !important;
+    }
     
 }
 
@@ -469,6 +475,16 @@ a:hover, a:active {
     
     .carousel {
         display: none;
+    }
+
+    .main-content .the-post img,
+    .main-content .the-post-single img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
+    .footer img {
+        margin-left: 1em;
     }
     
 }
