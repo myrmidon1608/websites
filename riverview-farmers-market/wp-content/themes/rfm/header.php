@@ -59,25 +59,25 @@
                             $menuItemWidth = round((100/$pages), 3);
                         ?>
                         <ul class="nav navbar-nav">
-                            <li class="<?php set_active("home") ?>">
+                            <li class="<?php set_active("home"); ?>">
                                 <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">Home</a>
                             </li>
-                            <li class="<?php set_active(331) ?>">
+                            <li class="<?php set_active(array(331, 478)); ?>">
                                 <a href="vendors" title="2014 Vendors">Vendors</a>
                             </li>
-                            <li class="<?php set_active(333) ?>">
+                            <li class="<?php set_active(333); ?>">
                                 <a href="events-calendar" title="Events Calendar">Events</a>
                             </li>
-                            <li class="<?php set_active(335) ?>">
+                            <li class="<?php set_active(335); ?>">
                                 <a href="ogdens-end-community-garden" title="Ogden's End Community Garden">Garden</a>
                             </li>
-                            <li class="<?php set_active(337) ?>">
+                            <li class="<?php set_active(337); ?>">
                                 <a href="contact" title="Contact <?php bloginfo('name'); ?>">Contact</a>
                             </li>
-                            <li class="<?php set_active(354) ?>">
+                            <li class="<?php set_active(354); ?>">
                                 <a href="contribute" title="Contribute">Contribute</a>
                             </li>
-                            <li class="<?php set_active(339) ?>">
+                            <li class="<?php set_active(339); ?>">
                                 <a href="frequently-asked-questions" title="<?php bloginfo('name'); ?> FAQs">FAQ</a>
                             </li>
                         </ul>
@@ -86,9 +86,9 @@
 
             <?php if( is_home() ) : ?>
             
-            <div class="homepage-banner row">
+            <div class="alert-banner homepage row">
                 <div class="col-sm-6">
-                    <a href="vendors" title="2014 Vendors">Sign up to be a vendor</a>
+                    <a href="sign-up-to-be-a-vendor" title="Vendor Application">Sign up to be a vendor</a>
                 </div>
                 <div class="col-sm-6">
                     <a href="contact" title="Contact <?php bloginfo('name'); ?>">Sign up for our newsletter</a>

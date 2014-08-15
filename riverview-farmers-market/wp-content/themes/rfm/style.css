@@ -76,13 +76,6 @@ a:hover, a:active {
     .img-holder img {
         width: 70%;
     }
-    
-.alert {
-    font-weight: bold;
-    color: #333;
-    background-color: #DBD563;
-    border-color: #3e400f;
-}
 
 .container {
     width: 100%;
@@ -209,36 +202,34 @@ a:hover, a:active {
         padding: 11px 15px 12px 15px;
     }
     
-.homepage-banner {
+.alert-banner.homepage {
     margin-right: 0;
-    margin-left: 0;
+    margin-left: 0; 
 }
 
-    .homepage-banner div {
-        padding-right: 0;
-        padding-left: 0;
-    }
-    
-    .homepage-banner div:first-child {
-        border-right: 2px solid #8C2810;
-    }
+.alert-banner div {
+    padding-right: 0;
+    padding-left: 0;
+    border-right: 1px solid #8C2810;
+    border-left: 1px solid #8C2810;
+}
 
-    .homepage-banner a:link, .homepage-banner a:visited {
-        background-color: #a32f13;
-        font-family: 'bebasregular';
-        font-size: 1.2em;
-        color: #fcf9f8;
-        line-height: 1em;
-        text-align: center;
-        text-transform: uppercase;
-        display: block;
-        padding: 0.9em 0 0.7em 0;
-    }
-    
-    .homepage-banner a:hover, .homepage-banner a:active {
-        background-color: #8C2810;
-        text-decoration: none;
-    }
+.alert-banner a:link, .alert-banner a:visited {
+    background-color: #a32f13;
+    font-family: 'bebasregular';
+    font-size: 1.2em;
+    color: #fcf9f8;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    padding: 0.9em 0 0.7em 0;
+}
+
+.alert-banner a:hover, .alert-banner a:active {
+    background-color: #8C2810;
+    text-decoration: none;
+}
 
 .carousel > .carousel-inner > .item,
 .carousel > .carousel-inner > .item > img,
@@ -336,6 +327,22 @@ a:hover, a:active {
 .main-content .the-content h4 {
     color: #3e400f;
     margin-top: 1.5em;
+}
+
+.main-content .download:link,
+.main-content .download:hover,
+.main-content .download:active,
+.main-content .download:visited {
+    background-color: #d15e40;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 1em auto;
+    border: 0;
+}
+
+.main-content .download img {
+    height: 2em;
+    margin-left: 0.5em;
 }
 
 .form-control {

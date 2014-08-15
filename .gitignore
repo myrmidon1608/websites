@@ -21,3 +21,4 @@ nbproject/project.xml
 /riverview-farmers-market/wp-signup.php
 /riverview-farmers-market/wp-trackback.php
 /riverview-farmers-market/xmlrpc.php
+*.db

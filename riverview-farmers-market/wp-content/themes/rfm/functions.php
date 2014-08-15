@@ -26,7 +26,17 @@ function root() {
 }
 
 function set_active($id) {
-    $activeCls = (($id == "home" && is_home()) || is_page($id)) ? " active" : "";
+    $activeCls = "";
+    
+    if($id == "home" && is_home()) {
+        $activeCls = " active";
+    }
+    
+    foreach((array)$id as $page) {
+        if(is_page($page)) {
+            $activeCls = " active";
+        }
+    }
     print $activeCls;
 }
 

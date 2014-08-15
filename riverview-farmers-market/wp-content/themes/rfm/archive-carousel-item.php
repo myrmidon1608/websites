@@ -28,28 +28,6 @@
                     </div>
                 </a>
             </div>
-            
-            <!--<div class="item active">
-              <img src="//placehold.it/1024x700" alt="">
-                <div class="carousel-caption">
-                    <h1>Community</h1>
-                    <p>A working Bootstrap carousel example.</p>
-                </div>
-            </div>
-            <div class="item">
-              <img src="//placehold.it/1024x700/662222" alt="">
-                <div class="carousel-caption">
-                    <h1>Fresh</h1>
-                    <p>This is the second slide text.</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="//placehold.it/1024x700/119922" alt="">
-                <div class="carousel-caption">
-                    <h1>Arts</h1>
-                    <p>Take note of the 'active' and 'slide' classes.</p>
-                </div>
-            </div>-->
 
         <?php 
             $i++;
