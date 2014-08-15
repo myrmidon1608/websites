@@ -22,3 +22,5 @@ nbproject/project.xml
 /riverview-farmers-market/wp-trackback.php
 /riverview-farmers-market/xmlrpc.php
 *.db
+*.db
+riverview-farmers-market/wp-content/themes/rfm/core/img/Thumbs.db
