@@ -54,8 +54,8 @@ function check_form($ele) {
     return $val;
 }
 
-function send_email($type) {
-    $to = "myrmidon16@gmail.com";//farmsintheheights@gmail.com";
+function send_email($type = "contact") {
+    $to = "farmsintheheights@gmail.com";
     $subject = $_POST["FNAME"] . " " . $_POST["LNAME"] . " has contacted the Farmers Market";
     $message = $_POST["BODY"];
     $from = "From: " . $_POST["FNAME"] . " " . $_POST["LNAME"] . " <" . $_POST["EMAIL"] . ">";

@@ -21,9 +21,13 @@
         }
         
         if(count($errors) == 0) {
-            send_email(); ?>
+            send_email($emailType); ?>
 
-            <div class="alert alert-info" role="alert">Your email has been sent. Thank you for contacting <?php bloginfo('name'); ?>!</div>
+            <div class="alert-banner row">
+                <div class="col-sm-12">
+                    <p>Your email has been sent. Thank you for contacting <?php bloginfo('name'); ?>!</p>
+                </div>
+            </div>
             
         <?php }
     }

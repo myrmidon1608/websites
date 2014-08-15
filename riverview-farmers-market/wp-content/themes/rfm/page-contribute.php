@@ -17,7 +17,10 @@
                 <div class="the-content">
                     <?php the_content(); ?>
                     
-                    <?php include("email-form.php"); ?>
+                    <?php 
+                        $emailType = "contribute";
+                        include("email-form.php");
+                    ?>
                 </div>
             </div>
 

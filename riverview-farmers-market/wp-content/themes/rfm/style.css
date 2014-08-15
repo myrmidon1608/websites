@@ -214,7 +214,7 @@ a:hover, a:active {
     border-left: 1px solid #8C2810;
 }
 
-.alert-banner a:link, .alert-banner a:visited {
+.alert-banner p, .alert-banner a:link, .alert-banner a:visited {
     background-color: #a32f13;
     font-family: 'bebasregular';
     font-size: 1.2em;
@@ -224,6 +224,7 @@ a:hover, a:active {
     text-transform: uppercase;
     display: block;
     padding: 0.9em 0 0.7em 0;
+    margin: 0;
 }
 
 .alert-banner a:hover, .alert-banner a:active {

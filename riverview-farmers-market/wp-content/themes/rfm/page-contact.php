@@ -58,7 +58,10 @@
                         
                     <h2>Send us an email</h2>
                     
-                    <?php include("email-form.php"); ?>
+                    <?php 
+                        $emailType = "contact";
+                        include("email-form.php");
+                    ?>
                     
                 </div>
             </div>
